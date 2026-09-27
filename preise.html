@@ -160,6 +160,45 @@
   </div>
 
   <p class="preise-klein">Die Haarlänge gilt für Damenleistungen mit Längenpreis; alle anderen Preise hängen nicht von der Länge ab. Die Dauer ist ein Richtwert. „ab“ heißt: Der Endpreis richtet sich nach Haar und Aufwand.</p>
+  <aside class="kaertchen-platz" aria-labelledby="kaertchen-titel" hidden>
+    <div class="kaertchen" id="kaertchen">
+      <div class="kaertchen-kopf">
+        <span class="kaertchen-marke" aria-hidden="true"><span class="kaertchen-marke-die">Die</span><span class="kaertchen-marke-wort">Friseure</span></span>
+        <div>
+          <h2 id="kaertchen-titel">Terminkärtchen</h2>
+          <p class="kaertchen-ort"><span data-nur="h">Haidhausen</span><span data-nur="i">Ismaning</span><span class="kaertchen-laenge"></span></p>
+        </div>
+      </div>
+      <p class="kaertchen-leer">Tippen Sie in der Liste auf eine Leistung — sie kommt hierher, mit Preis und Dauer. Daraus wird ein fertiger Terminwunsch.</p>
+      <ol class="kaertchen-liste" role="list"></ol>
+      <div class="kaertchen-voll">
+        <dl class="kaertchen-summe">
+          <div><dt>Zusammen</dt><dd class="summe-preis"></dd></div>
+          <div><dt>Dauer, etwa</dt><dd class="summe-dauer"></dd></div>
+        </dl>
+        <div class="kaertchen-felder">
+          <label class="feld"><span class="feld-name">Am liebsten bei</span><select class="feld-bei" name="bei"></select></label>
+          <label class="feld"><span class="feld-name">Wann passt es?</span><input class="feld-wann" name="wann" type="text" autocomplete="off" maxlength="80" placeholder="z. B. Samstag vormittags"></label>
+        </div>
+        <div class="kaertchen-wege">
+          <a class="knopf knopf-lampe kaertchen-mail" href="mailto:info@die-friseure-haidhausen.de">Per E-Mail schicken</a>
+          <button class="knopf knopf-linie kaertchen-kopie" type="button">Text kopieren</button>
+        </div>
+        <p class="kaertchen-meldung" role="status" aria-live="polite"></p>
+        <p class="kaertchen-klein">Das Kärtchen ist noch keine Buchung. Schicken Sie es per E&#8209;Mail, lesen Sie es am Telefon vor (<a data-nur="h" href="tel:+498952033549">089 52 03 35 49</a><a data-nur="i" href="tel:+498924590673">089 24 59 06 73</a>) oder buchen Sie direkt bei <a data-nur="h" href="https://www.treatwell.de/ort/die-friseure-aus-haidhausen/" rel="noopener">Treatwell</a><a data-nur="i" href="https://www.treatwell.de/ort/die-friseure-aus-ismaning/" rel="noopener">Treatwell</a>.</p>
+        <button class="kaertchen-leeren" type="button">Kärtchen leeren</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="kaertchen-leiste" hidden>
+    <p class="kaertchen-leiste-text"><span class="kl-zahl"></span><span class="kl-rest"></span></p>
+    <button class="knopf kaertchen-oeffnen" type="button" aria-haspopup="dialog">Kärtchen ansehen</button>
+  </div>
+  <dialog class="blatt" aria-labelledby="kaertchen-titel">
+    <button class="blatt-zu" type="button" aria-label="Kärtchen schließen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+  </dialog>
+
 </main>
 
 <footer class="sockel">

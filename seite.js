@@ -156,4 +156,230 @@
     ansicht.addEventListener("click", function (e) { if (e.target === ansicht) ansicht.close(); });
     ansicht.addEventListener("close", function () { if (ausloeser) ausloeser.focus({ preventScroll: true }); });
   }
+  /* --- Terminkärtchen: Leistungen antippen, nach Ablauf gesammelt, daraus
+         ein fertiger Terminwunsch. Alles bleibt im Browser. --- */
+  var platz = document.querySelector(".kaertchen-platz");
+  if (platz) {
+    var kaertchen = platz.querySelector(".kaertchen");
+    var liste = kaertchen.querySelector(".kaertchen-liste");
+    var summePreis = kaertchen.querySelector(".summe-preis");
+    var summeDauer = kaertchen.querySelector(".summe-dauer");
+    var laengeText = kaertchen.querySelector(".kaertchen-laenge");
+    var bei = kaertchen.querySelector(".feld-bei");
+    var wann = kaertchen.querySelector(".feld-wann");
+    var mail = kaertchen.querySelector(".kaertchen-mail");
+    var kopie = kaertchen.querySelector(".kaertchen-kopie");
+    var meldung = kaertchen.querySelector(".kaertchen-meldung");
+    var sockelLeiste = document.querySelector(".kaertchen-leiste");
+    var blatt = document.querySelector(".blatt");
+
+    /* Wer in welchem Salon schneidet — wie auf der Startseite */
+    var SALONS = {
+      haidhausen: { name: "Haidhausen", mail: "info@die-friseure-haidhausen.de",
+        team: ["Ali", "Ali Raza", "Wissam", "Juna", "Sara", "Zahed"] },
+      ismaning: { name: "Ismaning", mail: "info@die-friseure-ismaning.de",
+        team: ["Ali", "Ania", "Kimi"] }
+    };
+    var LAENGE = { k: "kurze Haare", m: "mittellange Haare", l: "lange Haare" };
+
+    var gewaehlt = [];
+    try { gewaehlt = JSON.parse(speicher.lesen("df-kaertchen") || "[]") || []; } catch (e) { gewaehlt = []; }
+    var wuensche = {};
+    try { wuensche = JSON.parse(speicher.lesen("df-kaertchen-wunsch") || "{}") || {}; } catch (e) { wuensche = {}; }
+
+    var wert = function (name) {
+      var k = document.querySelector('input[name="' + name + '"]:checked');
+      return k ? k.value : "";
+    };
+    var kurz = function (t) {
+      return t.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ß/g, "ss")
+        .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    };
+    var dauerText = function (min) {
+      if (min < 60) return min + " Min.";
+      var h = Math.floor(min / 60), m = min % 60;
+      return h + " Std." + (m ? " " + m + " Min." : "");
+    };
+    var euro = function (n) { return n.toLocaleString("de-DE") + " €"; };
+
+    /* Jede Zeile bekommt einen Knopf; die Kennung bleibt über Neuerzeugungen stabil */
+    var SVG = '<svg class="zeichen-plus" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>' +
+      '<svg class="zeichen-haken" viewBox="0 0 14 14" aria-hidden="true"><path d="M2.5 7.5l3 3 6-7" stroke="currentColor" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    var posten = Array.prototype.slice.call(document.querySelectorAll(".posten"));
+    posten.forEach(function (z) {
+      var nameEl = z.querySelector(".posten-name");
+      var name = nameEl.firstChild.textContent.trim();
+      var gruppe = z.closest(".gruppe");
+      z.dataset.wahl = gruppe.id + "-" + kurz(name) + "-" + kurz(z.dataset.salon || "");
+      z.dataset.name = name;
+      var k = document.createElement("button");
+      k.type = "button";
+      k.className = "posten-wahl";
+      k.setAttribute("aria-pressed", "false");
+      k.innerHTML = '<span class="nur-vorlesen">' + name + ' aufs Terminkärtchen</span><span class="posten-kreis">' + SVG + "</span>";
+      z.appendChild(k);
+      k.addEventListener("click", function () {
+        var i = gewaehlt.indexOf(z.dataset.wahl);
+        if (i < 0) { gewaehlt.push(z.dataset.wahl); neu = z.dataset.wahl; } else gewaehlt.splice(i, 1);
+        speicher.schreiben("df-kaertchen", JSON.stringify(gewaehlt));
+        zeichnen();
+      });
+    });
+    var neu = null;
+
+    /* Was gerade sichtbar gewählt ist, in der Reihenfolge der Liste (= Ablauf) */
+    var aktuell = function () {
+      /* Aus den Daten der Zeile, nicht aus der Sichtbarkeit: Zeilen in
+         zugeklappten Gruppen gehören genauso dazu. */
+      var salon = wert("salon") === "ismaning" ? "i" : "h";
+      var laenge = wert("laenge") || "k";
+      var passt = function (el) { return (" " + el.getAttribute("data-l") + " ").indexOf(" " + laenge + " ") > -1; };
+      return posten.filter(function (z) {
+        return gewaehlt.indexOf(z.dataset.wahl) > -1 && (" " + z.dataset.salon + " ").indexOf(" " + salon + " ") > -1;
+      }).map(function (z) {
+        var betrag = Array.prototype.find.call(z.querySelectorAll(".betrag"), passt);
+        var dauer = Array.prototype.find.call(z.querySelectorAll(".posten-dauer [data-l]"), passt);
+        var preisText = betrag ? betrag.textContent.replace(/\s+/g, " ").trim() : "";
+        return {
+          id: z.dataset.wahl,
+          name: z.dataset.name,
+          gruppe: z.closest(".gruppe").querySelector(".gruppe-titel").textContent,
+          herren: z.closest(".gruppe").id === "herren",
+          laenge: z.hasAttribute("data-laenge"),
+          ab: /^ab /.test(preisText),
+          preis: parseInt(preisText.replace(/\D/g, ""), 10) || 0,
+          preisText: preisText.replace(/ /g, " ").replace(/^ab /, "ab "),
+          dauer: dauer ? parseInt(dauer.textContent, 10) || 0 : 0
+        };
+      });
+    };
+
+    var salonJetzt = function () { return SALONS[wert("salon")] || SALONS.haidhausen; };
+
+    var teamFuellen = function () {
+      var s = salonJetzt();
+      var vorher = wuensche.bei || "";
+      var frag = document.createDocumentFragment();
+      var egal = new Option("egal, wer frei ist", "");
+      frag.appendChild(egal);
+      s.team.forEach(function (n) { frag.appendChild(new Option(n, n)); });
+      bei.replaceChildren(frag);
+      bei.value = s.team.indexOf(vorher) > -1 ? vorher : "";
+    };
+
+    var text = function (p) {
+      var s = salonJetzt();
+      var zeilen = ["Guten Tag,", "", "ich hätte gern einen Termin in " + s.name + ":"];
+      p.forEach(function (x) {
+        zeilen.push("– " + (x.herren ? "Herren: " : "") + x.name + (x.laenge ? " (" + LAENGE[wert("laenge")] + ")" : "") + ", " + x.preisText.replace(/ /g, " "));
+      });
+      var summe = p.reduce(function (a, x) { return a + x.preis; }, 0);
+      var dauer = p.reduce(function (a, x) { return a + x.dauer; }, 0);
+      zeilen.push("");
+      zeilen.push("Zusammen " + (p.some(function (x) { return x.ab; }) ? "ab " : "") + summe + " €, Dauer etwa " + dauerText(dauer).replace(/\.$/, "") + ".");
+      if (bei.value) zeilen.push("Am liebsten bei " + bei.value + ".");
+      if (wann.value.trim()) zeilen.push("Wann es mir passt: " + wann.value.trim());
+      zeilen.push("", "Vielen Dank und viele Grüße");
+      return zeilen.join("\n");
+    };
+
+    var zeichnen = function () {
+      posten.forEach(function (z) {
+        z.querySelector(".posten-wahl").setAttribute("aria-pressed", gewaehlt.indexOf(z.dataset.wahl) > -1 ? "true" : "false");
+      });
+      var p = aktuell();
+      var hat = p.length > 0;
+      kaertchen.classList.toggle("hat-posten", hat);
+      document.body.classList.toggle("hat-kaertchen", hat);
+      laengeText.textContent = p.some(function (x) { return x.laenge; }) ? " · " + LAENGE[wert("laenge")] : "";
+
+      var frag = document.createDocumentFragment();
+      p.forEach(function (x) {
+        var li = document.createElement("li");
+        if (x.id === neu) li.className = "neu";
+        li.innerHTML = '<span class="kp-name"></span><span class="kp-preis"></span>' +
+          '<button class="kp-weg" type="button"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>';
+        li.querySelector(".kp-name").textContent = x.name;
+        var d = document.createElement("span");
+        d.className = "kp-dauer";
+        d.textContent = x.gruppe + (x.dauer ? " · " + dauerText(x.dauer) : "");
+        li.querySelector(".kp-name").appendChild(d);
+        li.querySelector(".kp-preis").textContent = x.preisText;
+        var weg = li.querySelector(".kp-weg");
+        weg.setAttribute("aria-label", x.name + " vom Kärtchen nehmen");
+        weg.addEventListener("click", function () {
+          gewaehlt.splice(gewaehlt.indexOf(x.id), 1);
+          speicher.schreiben("df-kaertchen", JSON.stringify(gewaehlt));
+          zeichnen();
+          (liste.querySelector(".kp-weg") || kaertchen.querySelector("h2")).focus({ preventScroll: true });
+        });
+        frag.appendChild(li);
+      });
+      liste.replaceChildren(frag);
+      neu = null;
+
+      var summe = p.reduce(function (a, x) { return a + x.preis; }, 0);
+      var dauer = p.reduce(function (a, x) { return a + x.dauer; }, 0);
+      var ab = p.some(function (x) { return x.ab; });
+      summePreis.textContent = (ab ? "ab " : "") + euro(summe);
+      summeDauer.textContent = dauerText(dauer);
+
+      if (hat) {
+        var s = salonJetzt();
+        mail.href = "mailto:" + s.mail + "?subject=" + encodeURIComponent("Terminwunsch " + s.name) + "&body=" + encodeURIComponent(text(p));
+      }
+      if (sockelLeiste) {
+        sockelLeiste.querySelector(".kl-zahl").textContent = p.length + (p.length === 1 ? " Leistung" : " Leistungen") + " gesammelt";
+        sockelLeiste.querySelector(".kl-rest").textContent = (ab ? "ab " : "") + euro(summe) + " · etwa " + dauerText(dauer);
+        if (hat) { sockelLeiste.hidden = false; requestAnimationFrame(function () { sockelLeiste.classList.remove("zu"); }); }
+        else sockelLeiste.classList.add("zu");
+      }
+      if (!hat && blatt && blatt.open) blatt.close();
+    };
+
+    teamFuellen();
+    wann.value = wuensche.wann || "";
+    bei.addEventListener("change", function () { wuensche.bei = bei.value; speicher.schreiben("df-kaertchen-wunsch", JSON.stringify(wuensche)); zeichnen(); });
+    wann.addEventListener("input", function () { wuensche.wann = wann.value; speicher.schreiben("df-kaertchen-wunsch", JSON.stringify(wuensche)); zeichnen(); });
+    document.addEventListener("change", function (e) {
+      if (e.target.name === "salon") teamFuellen();
+      if (e.target.name === "salon" || e.target.name === "laenge") zeichnen();
+    });
+
+    kopie.addEventListener("click", function () {
+      var t = text(aktuell());
+      var fertig = function (ok) {
+        meldung.textContent = ok ? "Kopiert — jetzt in E-Mail oder Nachricht einfügen." : "Kopieren ging nicht. Bitte per E-Mail schicken.";
+        clearTimeout(kopie._uhr);
+        kopie._uhr = setTimeout(function () { meldung.textContent = ""; }, 4000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(function () { fertig(true); }, function () { fertig(false); });
+      else fertig(false);
+    });
+    kaertchen.querySelector(".kaertchen-leeren").addEventListener("click", function () {
+      gewaehlt = gewaehlt.filter(function (id) { return !aktuell().some(function (x) { return x.id === id; }); });
+      speicher.schreiben("df-kaertchen", JSON.stringify(gewaehlt));
+      zeichnen();
+    });
+
+    /* Schmaler Schirm: dasselbe Kärtchen wandert ins Blatt und zurück */
+    if (blatt && typeof blatt.showModal === "function") {
+      var oeffner = sockelLeiste.querySelector(".kaertchen-oeffnen");
+      oeffner.addEventListener("click", function () {
+        blatt.appendChild(kaertchen);
+        blatt.showModal();
+        kaertchen.querySelector("h2").setAttribute("tabindex", "-1");
+        kaertchen.querySelector("h2").focus({ preventScroll: true });
+      });
+      blatt.querySelector(".blatt-zu").addEventListener("click", function () { blatt.close(); });
+      blatt.addEventListener("click", function (e) { if (e.target === blatt) blatt.close(); });
+      blatt.addEventListener("close", function () {
+        platz.appendChild(kaertchen);
+        if (!sockelLeiste.classList.contains("zu")) oeffner.focus({ preventScroll: true });
+      });
+    }
+
+    platz.hidden = false;
+    zeichnen();
+  }
 })();
