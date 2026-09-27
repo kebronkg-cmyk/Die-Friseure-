@@ -26,7 +26,7 @@ GRUPPEN = [
     ("farbe", "Farbe & Strähnen", "Damen"),
     ("glaetten", "Keratin-Glättung", "nur Haidhausen"),
     ("augen", "Augenbrauen & Wimpern", ""),
-    ("haende", "Hände & Füße", "nur Ismaning"),
+    ("haende", "Hände & Füße", "nur Ismaning, bei Jasmin"),
 ]
 
 # Zuordnung: Muster auf den Treatwell-Namen → (Gruppe, Anzeigename, Rang).
