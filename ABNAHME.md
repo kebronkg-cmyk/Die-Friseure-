@@ -40,3 +40,7 @@ steht so, wie es die aktuellste Quelle (Treatwell) sagt.
 13. **Logo.** Das Logo (Schwung mit Gesichtsprofil) liegt nur als kleines
     PNG vor. Die Seite setzt die Wortmarke wie das Nasenschild in Schrift.
     Liegt das Logo als Vektor vor?
+14. **Terminwunsch per E-Mail.** Das Terminkärtchen auf der Preisseite
+    schickt den fertigen Wunsch an info@die-friseure-haidhausen.de bzw.
+    info@die-friseure-ismaning.de. Werden diese Postfächer gelesen? Sonst
+    bleibt nur „Text kopieren“ und der Anruf.

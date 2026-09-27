@@ -89,13 +89,83 @@ python3 werkzeuge/preise.py
 Das Skript bricht ab, wenn eine Leistung keiner Gruppe zugeordnet ist —
 dann `ZUORDNUNG` in `werkzeuge/preise.py` ergänzen.
 
-## Nächste Schritte im neuen Repo
+## Zweite Runde (27.09.2026): Feinschliff und Terminkärtchen
 
-1. Auspacken, committen, pushen; Pages einmal auf „GitHub Actions“ stellen.
-2. `impeccable`: Abschlussprüfer (`impeccable-finish-reviewer`) mit den
-   Aufnahmen laufen lassen, höchstens zwei Runden; danach der Documenter
-   (`DESIGN.md` + `.impeccable/design.json`) und der Detektor noch einmal.
-   In diesem Paket noch nicht gelaufen.
-3. `node .claude/skills/impeccable/scripts/detect.mjs` braucht
-   `npm install` im Skill-Ordner (die `node_modules` sind nicht im Zip).
-4. Antworten aus `ABNAHME.md` einarbeiten, vor allem Team und Zeiten.
+### Die eigene Funktion: das Terminkärtchen (Preisseite)
+
+Wie das Papierkärtchen an der Kasse. Jede Preiszeile trägt rechts einen
+Kreis (+ / Haken), die ganze Zeile ist die Tippfläche. Was angetippt ist,
+steht **nach Ablauf sortiert** auf dem Kärtchen: Preis für die gewählte
+Haarlänge, Summe (mit „ab“, wenn ein Posten einen ab-Preis hat), Dauer,
+Wunschperson (Team des gewählten Salons) und Zeitwunsch. Daraus wird ein
+fertiger Text:
+
+- **Per E-Mail schicken** öffnet das eigene Mailprogramm, an die Adresse
+  des gewählten Salons, Betreff „Terminwunsch Haidhausen/Ismaning“.
+- **Text kopieren** für Nachricht oder Telefon.
+- Ausdrücklich „noch keine Buchung“; Telefon und Treatwell daneben.
+
+Am breiten Schirm (ab 72 rem) steht es rechts auf derselben Eichenablage
+wie die Preisetiketten und klebt mit. Am Handy zeigt ein Sockel unten
+(anthrazit, Eichenkante, Zahl in Limette), was gesammelt ist; „Kärtchen
+ansehen“ öffnet es als Blatt von unten (Esc, Klick daneben, Fokus zurück).
+Wahl, Wunschperson und Zeitwunsch bleiben im Browser (`localStorage`,
+steht im Datenschutz). Ohne Skript bleibt das Kärtchen verborgen, die
+Liste funktioniert wie vorher. Eine Lampe: Liegt etwas darauf, leuchtet nur
+„Per E-Mail schicken“, der Terminknopf der Leiste wird zur Linie.
+
+### Feinschliff
+
+- **Auftakt am Desktop neu komponiert:** Satz links, Team rechts, darunter
+  das Nasenschild als Band über die ganze Breite. Der Querbalken des Arms
+  liegt genau auf der Trennlinie — die Linie wird zur Stange. Vorher stand
+  unter der Überschrift eine leere Wand von rund 480 px Höhe.
+- **Schildarm nach dem Foto nachgezeichnet** (`haidhausen-schild.jpg`,
+  gespiegelt): Wandplatte mit Bolzen, Wellenstrebe mit Schnecke, tragende
+  Strebe mit Schnecke, Hängestangen. Striche so kräftig, dass es auch mit
+  115 px Breite am Handy als Schmiedeeisen liest.
+- Leiste deckend (vorher schien Text durch die Wortmarke).
+- Adresse bricht nicht mehr in „81667 / München“.
+- Adresskarten: nur die Wege unten bündig, der Hinweis bleibt an den Zeiten.
+- Wohnzimmertext auf der Satzkante der Seite, auch über 1280 px.
+- Pfeil als gezeichnete Maske (`--zeichen-pfeil`) statt Unicode-Zeichen.
+- Browserflächen aus der Palette (`accent-color`, `caret-color`,
+  `scrollbar-color`).
+
+### Gemessen, alt gegen neu (gleiches Messskript)
+
+| Wert | alt 390 | neu 390 | alt 1440 | neu 1440 |
+|---|---|---|---|---|
+| Oberkante erstes Bild | 57 px | 57 px | 108 px | 108 px |
+| Terminknopf unten | 782 px | 782 px | 805 px | **663 px** |
+| Leuchtende Knöpfe im ersten Bildschirm | 1 | 1 | 1 | 1 |
+| Überschrift : Text | 45 : 16 | 45 : 16 | 84 : 20 | 84 : 20 |
+| Wörter im ersten Bildschirm | 66 | 66 | 69 | 85 |
+| Seitenhöhe | 4.426 px | 4.466 px | 4.815 px | **4.749 px** |
+
+Die 16 Wörter mehr am Desktop sind keine neuen Wörter im Auftakt: Der
+Auftakt ist 142 px kürzer geworden, deshalb schaut die Überschrift „Wer hier
+schneidet“ mit ihrem Satz unten ins Bild. Die 40 px am Handy sind die
+Adresse, die jetzt sauber zweizeilig bricht.
+
+Detektor `[]`, keine Überbreite bei 360/390/768/1024 px, schwächster
+Kontrast weiterhin 6,70 : 1, keine Konsolenfehler. Verhaltenstest des
+Kärtchens (Playwright): Auswahl über zugeklappte Gruppen hinweg, Längen-
+und Salonwechsel, Summe, E-Mail-Text, Kopieren, Blatt mit Esc und
+Fokusrückgabe, Wahl bleibt nach Neuladen.
+
+Abschlussprüfer (`impeccable-finish-reviewer`): zwei Runden. Runde 1:
+acht Befunde, alle eingearbeitet; Runde 2: sieben erledigt, der Schildarm
+teilweise — danach mit Strebe und kräftigeren Strichen neu gezeichnet.
+Prüfaufnahmen der Preisseite nicht mehr als Kacheln (klebende Elemente
+erscheinen dort doppelt), sondern mit Viewport auf `scrollHeight`.
+
+## Nächste Schritte
+
+1. Pages einmal auf „GitHub Actions“ stellen, dann nach dem Merge die
+   Live-URL prüfen.
+2. Antworten aus `ABNAHME.md` einarbeiten, vor allem Team und Zeiten —
+   das Team steht auch in `seite.js` (Wunschperson im Kärtchen).
+3. Detektor: `npm install` in `.claude/skills/impeccable/` (die
+   `package.json` liegt jetzt dort), dann
+   `node .claude/skills/impeccable/scripts/detect.mjs --json index.html preise.html stil.css`.
