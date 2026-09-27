@@ -1,0 +1,432 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-27T14:31:35.410Z",
+  "title": "Design System: Die Friseure",
+  "extensions": {
+    "colorMeta": {
+      "wand": {
+        "role": "neutral",
+        "displayName": "Salonwand",
+        "canonical": "oklch(97.8% 0.002 250)",
+        "tonalRamp": [
+          "oklch(15% 0.002 250)",
+          "oklch(26% 0.002 250)",
+          "oklch(38% 0.002 250)",
+          "oklch(50% 0.002 250)",
+          "oklch(62% 0.002 250)",
+          "oklch(74% 0.002 250)",
+          "oklch(85% 0.002 250)",
+          "oklch(95% 0.002 250)"
+        ]
+      },
+      "wand-tief": {
+        "role": "neutral",
+        "displayName": "Wand im Schatten",
+        "canonical": "oklch(94% 0.003 250)",
+        "tonalRamp": [
+          "oklch(15% 0.003 250)",
+          "oklch(26% 0.003 250)",
+          "oklch(38% 0.003 250)",
+          "oklch(50% 0.003 250)",
+          "oklch(62% 0.003 250)",
+          "oklch(74% 0.003 250)",
+          "oklch(85% 0.003 250)",
+          "oklch(95% 0.003 250)"
+        ]
+      },
+      "anthrazit": {
+        "role": "neutral",
+        "displayName": "Anthrazit",
+        "canonical": "oklch(27% 0.004 265)",
+        "tonalRamp": [
+          "oklch(15% 0.004 265)",
+          "oklch(26% 0.004 265)",
+          "oklch(38% 0.004 265)",
+          "oklch(50% 0.004 265)",
+          "oklch(62% 0.004 265)",
+          "oklch(74% 0.004 265)",
+          "oklch(85% 0.004 265)",
+          "oklch(95% 0.004 265)"
+        ]
+      },
+      "sockel": {
+        "role": "neutral",
+        "displayName": "Sockel",
+        "canonical": "oklch(31% 0.004 250)",
+        "tonalRamp": [
+          "oklch(15% 0.004 250)",
+          "oklch(26% 0.004 250)",
+          "oklch(38% 0.004 250)",
+          "oklch(50% 0.004 250)",
+          "oklch(62% 0.004 250)",
+          "oklch(74% 0.004 250)",
+          "oklch(85% 0.004 250)",
+          "oklch(95% 0.004 250)"
+        ]
+      },
+      "grau": {
+        "role": "neutral",
+        "displayName": "Nebengrau",
+        "canonical": "oklch(46% 0.007 265)",
+        "tonalRamp": [
+          "oklch(15% 0.007 265)",
+          "oklch(26% 0.007 265)",
+          "oklch(38% 0.007 265)",
+          "oklch(50% 0.007 265)",
+          "oklch(62% 0.007 265)",
+          "oklch(74% 0.007 265)",
+          "oklch(85% 0.007 265)",
+          "oklch(95% 0.007 265)"
+        ]
+      },
+      "grau-hell": {
+        "role": "neutral",
+        "displayName": "Helles Grau",
+        "canonical": "oklch(80% 0.006 250)",
+        "tonalRamp": [
+          "oklch(15% 0.006 250)",
+          "oklch(26% 0.006 250)",
+          "oklch(38% 0.006 250)",
+          "oklch(50% 0.006 250)",
+          "oklch(62% 0.006 250)",
+          "oklch(74% 0.006 250)",
+          "oklch(85% 0.006 250)",
+          "oklch(95% 0.006 250)"
+        ]
+      },
+      "metall": {
+        "role": "neutral",
+        "displayName": "Schildmetall",
+        "canonical": "oklch(66% 0.007 255)",
+        "tonalRamp": [
+          "oklch(15% 0.007 255)",
+          "oklch(26% 0.007 255)",
+          "oklch(38% 0.007 255)",
+          "oklch(50% 0.007 255)",
+          "oklch(62% 0.007 255)",
+          "oklch(74% 0.007 255)",
+          "oklch(85% 0.007 255)",
+          "oklch(95% 0.007 255)"
+        ]
+      },
+      "eiche": {
+        "role": "tertiary",
+        "displayName": "Eichenablage",
+        "canonical": "oklch(68.6% 0.104 67)",
+        "tonalRamp": [
+          "oklch(15% 0.104 67)",
+          "oklch(26% 0.104 67)",
+          "oklch(38% 0.104 67)",
+          "oklch(50% 0.104 67)",
+          "oklch(62% 0.104 67)",
+          "oklch(74% 0.104 67)",
+          "oklch(85% 0.104 67)",
+          "oklch(95% 0.104 67)"
+        ]
+      },
+      "limette": {
+        "role": "primary",
+        "displayName": "Schild-Limette",
+        "canonical": "oklch(80% 0.18 120)",
+        "tonalRamp": [
+          "oklch(15% 0.18 120)",
+          "oklch(26% 0.18 120)",
+          "oklch(38% 0.18 120)",
+          "oklch(50% 0.18 120)",
+          "oklch(62% 0.18 120)",
+          "oklch(74% 0.18 120)",
+          "oklch(85% 0.18 120)",
+          "oklch(95% 0.18 120)"
+        ]
+      },
+      "limette-tief": {
+        "role": "primary",
+        "displayName": "Gedrückte Limette",
+        "canonical": "oklch(72% 0.17 121)",
+        "tonalRamp": [
+          "oklch(15% 0.17 121)",
+          "oklch(26% 0.17 121)",
+          "oklch(38% 0.17 121)",
+          "oklch(50% 0.17 121)",
+          "oklch(62% 0.17 121)",
+          "oklch(74% 0.17 121)",
+          "oklch(85% 0.17 121)",
+          "oklch(95% 0.17 121)"
+        ]
+      },
+      "limette-rand": {
+        "role": "primary",
+        "displayName": "Lampenrand",
+        "canonical": "oklch(71.2% 0.156 119.5)",
+        "tonalRamp": [
+          "oklch(15% 0.156 119.5)",
+          "oklch(26% 0.156 119.5)",
+          "oklch(38% 0.156 119.5)",
+          "oklch(50% 0.156 119.5)",
+          "oklch(62% 0.156 119.5)",
+          "oklch(74% 0.156 119.5)",
+          "oklch(85% 0.156 119.5)",
+          "oklch(95% 0.156 119.5)"
+        ]
+      },
+      "papier": {
+        "role": "neutral",
+        "displayName": "Papier",
+        "canonical": "oklch(100% 0 0)",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(50% 0 0)",
+          "oklch(62% 0 0)",
+          "oklch(74% 0 0)",
+          "oklch(85% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Große Überschrift",
+        "purpose": "Die eine h1 je Seite (Auftakt, Preise); schmal 72 %, 820."
+      },
+      "headline": {
+        "displayName": "Kapitel",
+        "purpose": "Kapitelüberschriften, höchstens 18ch."
+      },
+      "title": {
+        "displayName": "Titel",
+        "purpose": "Gruppentitel, Adresskarten, Kärtchenkopf."
+      },
+      "body": {
+        "displayName": "Text",
+        "purpose": "Lesetext, normal breit."
+      },
+      "label": {
+        "displayName": "Beschriftung",
+        "purpose": "Navigation, Schalter, Rollen, Zeiten."
+      },
+      "schild": {
+        "displayName": "Schildschrift / Wortmarke",
+        "purpose": "„FRISEURE“ in Wortmarke, Schildscheibe und Stempel; 62 % breit, 860, Versalien."
+      }
+    },
+    "roundedMeta": {
+      "kante": {
+        "value": "2px",
+        "purpose": "Unterkante von Etikett und Kärtchen, Ablage, Fokusrahmen."
+      },
+      "ecke": {
+        "value": "0.375rem",
+        "purpose": "Fotos, Karten, Felder."
+      },
+      "blatt": {
+        "value": "0.875rem",
+        "purpose": "Oberkante des Blatts am Handy."
+      },
+      "pill": {
+        "value": "999px",
+        "role": "pill",
+        "purpose": "Knöpfe und Schalter."
+      }
+    },
+    "shadows": [
+      {
+        "name": "schatten",
+        "value": "0 1px 2px color-mix(in oklch, var(--anthrazit) 12%, transparent), 0 8px 24px -8px color-mix(in oklch, var(--anthrazit) 22%, transparent)",
+        "purpose": "Nur Gegenstände im Raum: Schildscheibe und Terminkärtchen."
+      }
+    ],
+    "motion": [
+      {
+        "name": "kurve",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Ausrollkurve für alle Auftritte und Zustandswechsel."
+      },
+      {
+        "name": "kurve-ab",
+        "value": "cubic-bezier(0.55, 0, 1, 0.45)",
+        "purpose": "Abgang beschleunigt: Kopfleiste weicht aus, Kärtchenleiste geht."
+      },
+      {
+        "name": "dauer",
+        "value": "0.45s",
+        "purpose": "Standarddauer für Farbe, Rand, Einblenden."
+      },
+      {
+        "name": "dauer-schild",
+        "value": "0.8s",
+        "purpose": "Drehung der Schildscheibe zwischen den Salons."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "kleinst",
+        "value": "23.5rem"
+      },
+      {
+        "name": "handy",
+        "value": "40rem"
+      },
+      {
+        "name": "ohne-nav",
+        "value": "52rem"
+      },
+      {
+        "name": "auftakt-zweispaltig",
+        "value": "64rem"
+      },
+      {
+        "name": "kaertchen-daneben",
+        "value": "72rem"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Lampe (Hauptknopf)",
+      "kind": "button",
+      "refersTo": "knopf-lampe",
+      "description": "Der eine leuchtende Knopf je Gruppe.",
+      "html": "<a class=\"ds-knopf ds-knopf-lampe\" href=\"#\">Termin buchen</a>",
+      "css": ".ds-knopf{display:inline-flex;align-items:center;justify-content:center;min-height:2.875rem;padding:0.6rem 1.35rem;border-radius:999px;font-family:var(--schrift);font-weight:650;font-size:1rem;text-decoration:none;white-space:nowrap;transition:background-color var(--dauer) var(--kurve),border-color var(--dauer) var(--kurve),transform 0.3s var(--kurve)}.ds-knopf-lampe{background:var(--limette);color:var(--anthrazit);border:1px solid color-mix(in oklch, var(--anthrazit) 18%, var(--limette))}.ds-knopf-lampe:hover{background:var(--limette-tief)}.ds-knopf:active{transform:translateY(1px)}.ds-knopf:focus-visible{outline:2px solid var(--anthrazit);outline-offset:3px}"
+    },
+    {
+      "name": "Linie (Nebenknopf)",
+      "kind": "button",
+      "refersTo": "knopf-linie",
+      "description": "Jeder weitere Knopf einer Gruppe.",
+      "html": "<a class=\"ds-knopf-linie\" href=\"#\">Anrufen</a>",
+      "css": ".ds-knopf-linie{display:inline-flex;align-items:center;min-height:2.875rem;padding:0.6rem 1.35rem;border-radius:999px;font-family:var(--schrift);font-weight:650;font-size:1rem;text-decoration:none;color:var(--anthrazit);border:1px solid var(--linie-stark);transition:border-color var(--dauer) var(--kurve),transform 0.3s var(--kurve)}.ds-knopf-linie:hover{border-color:var(--anthrazit)}.ds-knopf-linie:active{transform:translateY(1px)}.ds-knopf-linie:focus-visible{outline:2px solid var(--anthrazit);outline-offset:3px}"
+    },
+    {
+      "name": "Salonschalter",
+      "kind": "chip",
+      "refersTo": "schalter-wahl",
+      "description": "Radioknöpfe in einer Papierpille; schaltet alles Ortsgebundene über :has().",
+      "html": "<fieldset class=\"ds-schalter\"><legend class=\"ds-nur-vorlesen\">Salon</legend><input class=\"ds-wahl\" type=\"radio\" name=\"ds-salon\" id=\"ds-h\" checked><label for=\"ds-h\">Haidhausen</label><input class=\"ds-wahl\" type=\"radio\" name=\"ds-salon\" id=\"ds-i\"><label for=\"ds-i\">Ismaning</label></fieldset>",
+      "css": ".ds-schalter{display:inline-flex;border:1px solid var(--linie-stark);border-radius:999px;padding:0.1875rem;margin:0;background:var(--papier);font-family:var(--schrift)}.ds-nur-vorlesen{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.ds-wahl{position:absolute;opacity:0;width:1px;height:1px;margin:0}.ds-schalter label{cursor:pointer;padding:0.4rem 0.95rem;border-radius:999px;font-size:0.9375rem;font-weight:560;color:var(--grau);transition:background-color var(--dauer) var(--kurve),color var(--dauer) var(--kurve)}.ds-wahl:checked+label{background:var(--anthrazit);color:var(--wand)}.ds-wahl:not(:checked)+label:hover{color:var(--anthrazit)}.ds-wahl:focus-visible+label{outline:2px solid var(--anthrazit);outline-offset:3px}"
+    },
+    {
+      "name": "Preisetikett auf der Ablage",
+      "kind": "card",
+      "refersTo": "etikett",
+      "description": "Papieretikett mit schmaler Preiszahl, auf einem Eichenstreifen stehend.",
+      "html": "<div class=\"ds-ablage\"><a class=\"ds-etikett\" href=\"#\"><span class=\"ds-etikett-name\">Damenhaarschnitt</span><span class=\"ds-etikett-preis\">ab 45 €</span></a></div>",
+      "css": ".ds-ablage{position:relative;display:inline-block;padding-bottom:0.9rem;font-family:var(--schrift)}.ds-ablage::after{content:\"\";position:absolute;left:-0.5rem;right:-0.5rem;bottom:0;height:0.5rem;border-radius:2px;background:var(--eiche)}.ds-etikett{display:grid;gap:1.25rem;width:10rem;padding:1rem 1.1rem 1.1rem;background:var(--papier);color:var(--anthrazit);border:1px solid var(--linie);border-radius:var(--ecke) var(--ecke) 2px 2px;text-decoration:none;transition:transform 0.35s var(--kurve)}.ds-etikett:hover{transform:translateY(-3px)}.ds-etikett:focus-visible{outline:2px solid var(--anthrazit);outline-offset:3px}.ds-etikett-name{font-weight:600;line-height:1.25}.ds-etikett-preis{font-size:1.75rem;font-weight:800;font-stretch:72%;font-variant-numeric:tabular-nums;line-height:1}"
+    },
+    {
+      "name": "Feld",
+      "kind": "input",
+      "refersTo": "feld",
+      "description": "Eingabe im Terminkärtchen: Wandgrund, feste Linie, Anthrazit im Fokus.",
+      "html": "<label class=\"ds-feld\"><span class=\"ds-feld-name\">Zeitwunsch</span><input type=\"text\" placeholder=\"z. B. Donnerstag ab 17 Uhr\"></label>",
+      "css": ".ds-feld{display:grid;gap:0.25rem;font-family:var(--schrift)}.ds-feld-name{font-size:var(--t-klein);font-weight:600;color:var(--grau)}.ds-feld input{min-height:2.75rem;padding:0.5rem 0.75rem;font:inherit;font-size:1rem;color:var(--anthrazit);background:var(--wand);border:1px solid var(--linie-stark);border-radius:var(--ecke);transition:border-color var(--dauer) var(--kurve)}.ds-feld input::placeholder{color:var(--grau);opacity:1}.ds-feld input:focus-visible{outline:2px solid var(--anthrazit);outline-offset:1px;border-color:var(--anthrazit)}"
+    },
+    {
+      "name": "Kopfleiste",
+      "kind": "nav",
+      "refersTo": "leiste",
+      "description": "Wortmarke, Links, Nummer, Terminknopf; weicht beim Runterscrollen aus.",
+      "html": "<header class=\"ds-leiste\"><a class=\"ds-wortmarke\" href=\"#\"><span class=\"ds-wm-die\">Die</span><span class=\"ds-wm-wort\">Friseure</span></a><nav class=\"ds-nav\"><a href=\"#\">Team</a><a href=\"#\" aria-current=\"page\">Preise</a><a href=\"#\">Anfahrt</a></nav></header>",
+      "css": ".ds-leiste{display:flex;align-items:center;gap:1.5rem;min-height:4rem;padding-inline:1.5rem;background:var(--wand);color:var(--anthrazit);border-bottom:1px solid var(--linie);font-family:var(--schrift)}.ds-wortmarke{display:inline-flex;flex-direction:column;line-height:0.82;text-decoration:none;color:inherit}.ds-wm-die{font-size:0.6875rem;font-weight:650;letter-spacing:0.24em;text-transform:uppercase;padding-left:0.08em}.ds-wm-wort{font-size:1.625rem;font-weight:860;font-stretch:62%;text-transform:uppercase;letter-spacing:0.01em}.ds-nav{display:flex;gap:1.5rem;margin-left:auto}.ds-nav a{color:inherit;text-decoration:none;font-weight:560;font-size:0.9375rem}.ds-nav a[aria-current=page]{border-bottom:2px solid var(--limette)}.ds-nav a:hover{text-decoration:underline}.ds-nav a:focus-visible,.ds-wortmarke:focus-visible{outline:2px solid var(--anthrazit);outline-offset:3px}"
+    },
+    {
+      "name": "Nasenschild",
+      "kind": "custom",
+      "refersTo": "schild-scheibe",
+      "description": "Runde Scheibe aus Sockelgrau mit Metallrand; dreht sich zwischen den Salons.",
+      "html": "<div class=\"ds-schild\"><div class=\"ds-scheibe\"><span class=\"ds-s-die\">Die</span><span class=\"ds-s-wort\">Friseure</span><span class=\"ds-s-ort\">Haidhausen</span></div></div>",
+      "css": ".ds-schild{--d:7.75rem;perspective:700px;font-family:var(--schrift)}.ds-scheibe{width:var(--d);height:var(--d);display:grid;place-content:center;justify-items:center;gap:0.1rem;border-radius:50%;background:var(--sockel);border:3px solid var(--metall);color:var(--wand);box-shadow:var(--schatten);transition:transform var(--dauer-schild) var(--kurve),border-color var(--dauer) var(--kurve)}.ds-scheibe:hover{border-color:var(--eiche)}.ds-s-die{font-size:0.5625rem;font-weight:650;letter-spacing:0.26em;text-transform:uppercase;line-height:1}.ds-s-wort{font-size:calc(var(--d) * 0.19);font-weight:860;font-stretch:62%;text-transform:uppercase;line-height:0.95;color:var(--limette)}.ds-s-ort{margin-top:0.3rem;padding-top:0.3rem;border-top:1px solid color-mix(in oklch, var(--wand) 30%, transparent);font-size:max(0.6875rem, calc(var(--d) * 0.097));font-weight:600;font-stretch:86%;letter-spacing:0.02em;line-height:1}"
+    },
+    {
+      "name": "Terminkärtchen",
+      "kind": "custom",
+      "refersTo": "kaertchen",
+      "description": "Papierkärtchen mit Stempel, gepunkteten Posten und Summe, auf der Eichenablage.",
+      "html": "<div class=\"ds-kaertchen\"><div class=\"ds-k-kopf\"><span class=\"ds-marke\"><span class=\"ds-m-die\">Die</span><span class=\"ds-m-wort\">Friseure</span></span><strong class=\"ds-k-titel\">Terminkärtchen</strong></div><ul class=\"ds-k-liste\"><li><span>Waschen, Schneiden, Föhnen</span><b>52 €</b></li></ul><div class=\"ds-k-summe\"><span>Summe</span><b>52 €</b></div></div>",
+      "css": ".ds-kaertchen{position:relative;width:20rem;margin-bottom:0.5rem;padding:1.25rem 1.25rem 1.1rem;background:var(--papier);color:var(--anthrazit);border:1px solid var(--linie);border-radius:var(--ecke) var(--ecke) 2px 2px;box-shadow:var(--schatten);font-family:var(--schrift)}.ds-kaertchen::after{content:\"\";position:absolute;left:-0.5rem;right:-0.5rem;bottom:calc(-0.5rem - 1px);height:0.5rem;border-radius:2px;background:var(--eiche)}.ds-k-kopf{display:flex;align-items:center;gap:0.8rem;padding-bottom:0.9rem;border-bottom:1px dashed var(--linie-stark)}.ds-marke{display:grid;place-content:center;justify-items:center;width:3.5rem;height:3.5rem;border-radius:50%;background:var(--sockel);border:2px solid var(--metall);color:var(--wand);line-height:1}.ds-m-die{font-size:0.4375rem;font-weight:650;letter-spacing:0.26em;text-transform:uppercase}.ds-m-wort{font-size:0.75rem;font-weight:860;font-stretch:62%;text-transform:uppercase;color:var(--limette)}.ds-k-titel{font-size:1.5rem;font-weight:780;font-stretch:72%}.ds-k-liste{list-style:none;padding:0;margin:0.35rem 0 0}.ds-k-liste li{display:flex;justify-content:space-between;gap:0.75rem;padding:0.55rem 0;border-bottom:1px dotted var(--linie-stark);font-size:0.9375rem}.ds-k-liste b{font-variant-numeric:tabular-nums}.ds-k-summe{display:flex;justify-content:space-between;align-items:baseline;margin-top:0.9rem;color:var(--grau);font-size:0.9375rem}.ds-k-summe b{color:var(--anthrazit);font-size:1.75rem;font-weight:800;font-stretch:72%;font-variant-numeric:tabular-nums}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Der Raum in der Wörthstraße",
+    "overview": "Die Seite ist der Salon in Haidhausen, von vorn fotografiert und flach gelegt: oben die kühle weiße Wand, unten der anthrazitfarbene Sockel, dazwischen eine helle Eichenablage. Auf dieser Wand steht, was der Laden wirklich hat — Gesichter in ihrer Aufnahmegröße, Preise als Etiketten, zwei Adressen. Das einzige Leuchten kommt aus dem eigenen Logo und vom Nasenschild an der Fassade: ein Limettengrün, das auf jeder Fläche genau einmal den Weg zeigt.\n\nDie Dichte ist ruhig und hell, mit großzügiger Luft zwischen den Kapiteln. Die Schrift ist eine einzige Familie (Archivo) in zwei Haltungen: schmal und fett wie der Schriftzug auf dem Schild für Überschriften, Zahlen und Marke; normal breit für alles, was man liest. Tiefe entsteht nicht aus Schatten, sondern aus Material: Papier liegt auf Wand, Wand steht auf Eiche, die Eiche sitzt auf dem Sockel.\n\nDie Eigenheiten des Hauses sind Gegenstände, keine Dekoration: das Nasenschild, das sich zwischen den Salons dreht, und das Terminkärtchen, das wie das Papierkärtchen an der Kasse auf der Ablage steht. Die Handyfassung ist eine eigene Komposition, keine gestapelte Desktopseite.",
+    "keyCharacteristics": [
+      "Kühle, helle Wand als Grund; Anthrazit für Text; Limette als einzige Lampe.",
+      "Eine Schriftfamilie, zwei Breiten: 72 % (Schild) für Überschriften und Zahlen, 100 % für Text.",
+      "Material statt Schatten: Papier, Eiche, Sockel, Metall.",
+      "Salonwahl ohne Skript; alles, was sich unterscheidet, schaltet mit.",
+      "Fotos nie größer als ihre Vorlage."
+    ],
+    "rules": [
+      {
+        "name": "The Eine-Lampe Rule",
+        "body": "In jeder Knopfgruppe leuchtet genau ein Knopf in Limette; alle anderen sind Linie. Der Terminknopf in der Kopfleiste bleibt Linie, solange der Auftakt mit seinem eigenen Terminknopf sichtbar ist, und auf der Preisseite, sobald etwas auf dem Kärtchen liegt — dann führt dessen Knopf.",
+        "section": "colors"
+      },
+      {
+        "name": "The Limette-auf-Dunkel Rule",
+        "body": "Limette als Schriftfarbe steht nur auf Sockel oder Anthrazit (Schild, Stempel, Wortmarke im Sockel, Kärtchenleiste, gewählter Kreis). Auf der Wand tritt sie nur als Fläche mit anthrazitfarbener Schrift oder als Linie auf.",
+        "section": "colors"
+      },
+      {
+        "name": "The Eiche-nur-Ornament Rule",
+        "body": "Eiche ist ein Gegenstand im Raum — Ablage oder Kante —, nie Text und nie Fläche hinter Inhalt.",
+        "section": "colors"
+      },
+      {
+        "name": "The Linien-aus-Anthrazit Rule",
+        "body": "Linien sind keine eigenen Farben, sondern Anthrazit über `color-mix` (14 % fein, 32 % stark). Neue Transparenzen entstehen genauso aus einem Token, nie als Rohwert.",
+        "section": "colors"
+      },
+      {
+        "name": "The Zwei-Breiten Rule",
+        "body": "Was man liest, ist 100 % breit; was man erkennt — Überschrift, Preis, Marke —, ist schmal. Keine dritte Breite außer der Ortszeile im Schild (86 %).",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabellenziffern Rule",
+        "body": "Jede Zahl, die man vergleicht oder wählt — Preise, Telefonnummern, Zeiten, Summen —, steht in `tabular-nums`.",
+        "section": "typography"
+      },
+      {
+        "name": "The Treppe Rule",
+        "body": "Schriftgrößen kommen aus der Treppe in `typography.scale`. Gesperrte Versalien gibt es nur in der Marke („DIE“ über „FRISEURE“), nie als Kennzeile über einer Überschrift.",
+        "section": "typography"
+      },
+      {
+        "name": "The Vorlagengröße Rule",
+        "body": "Kein Foto wird über seine Vorlage gezogen: Porträts 11,5 rem breit (369 px Vorlage), Raumfoto höchstens 1280 px, Auftaktbild höchstens 1000 px. Die Aufnahme gibt das Format vor; `object-fit: cover` nur, wo das Format der Aufnahme dem Rahmen entspricht (Galerie, Raumfoto 16 : 10).",
+        "section": "layout"
+      },
+      {
+        "name": "The Schleier-nur-hinter-Text Rule",
+        "body": "Über einem vollflächigen Foto liegt ein Schleier aus der Wandfarbe nur als senkrechtes Band hinter dem Textblock, nach oben ausgeblendet; der Rest der Aufnahme bleibt offen.",
+        "section": "layout"
+      },
+      {
+        "name": "The Material-statt-Schatten Rule",
+        "body": "Karten liegen mit einer feinen Linie auf der Wand, nicht mit Schatten. Der Schatten ist dem Schild und dem Kärtchen vorbehalten.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do lass in jeder Knopfgruppe genau einen Knopf in Limette leuchten; alle anderen sind Linie.",
+      "Do setze Limette als Schrift nur auf Sockel oder Anthrazit.",
+      "Do setze Eiche nur als Ablage oder Kante (0,5 rem Streifen, 3–4 px Kante).",
+      "Do schalte alles Ortsgebundene über die Radioknöpfe und `:has()`, ohne Skript.",
+      "Do bewege nur `transform` und `opacity`, mit Ausrollkurve, 0,3–0,9 s, und bediene `prefers-reduced-motion`.",
+      "Do setze Preise, Telefonnummern und Zeiten in Tabellenziffern.",
+      "Do bilde Transparenzen über `color-mix(in oklch, var(--token) N%, transparent)`."
+    ],
+    "donts": [
+      "Don't zieh ein Foto über seine Vorlage hinaus (Porträts 369 px, Raumfotos 1280 px).",
+      "Don't lass zwei Knöpfe einer Gruppe gleichzeitig leuchten — auch nicht Kopfleiste und Auftakt.",
+      "Don't setze Eiche als Text oder als Fläche hinter Inhalt.",
+      "Don't gib Karten einen Schatten; der Schatten gehört Schild und Kärtchen.",
+      "Don't leg einen Schleier über die ganze Fläche eines Fotos.",
+      "Don't setze gesperrte Versalien als Kennzeile über eine Überschrift; gesperrt ist nur „DIE“ in der Marke.",
+      "Don't führ eine neue Farbe als Rohwert ein; jede Farbe ist ein Token in `:root`."
+    ]
+  }
+}

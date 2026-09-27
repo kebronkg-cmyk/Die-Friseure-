@@ -1,0 +1,1191 @@
+{
+ "name": "Die Friseure aus Haidhausen",
+ "rating": {
+  "weightedAverage": 4.59,
+  "count": 5910,
+  "dimensions": [
+   {
+    "name": "Ambiente",
+    "average": 4.36,
+    "count": 3997
+   },
+   {
+    "name": "Sauberkeit",
+    "average": 4.5,
+    "count": 3997
+   },
+   {
+    "name": "Service",
+    "average": 4.62,
+    "count": 3991
+   }
+  ],
+  "displayAverage": "4,6",
+  "average": 4.59
+ },
+ "openingHours": [
+  {
+   "open": true,
+   "dayOfWeek": "monday",
+   "from": "09:00",
+   "to": "19:30"
+  },
+  {
+   "open": true,
+   "dayOfWeek": "tuesday",
+   "from": "09:00",
+   "to": "19:30"
+  },
+  {
+   "open": true,
+   "dayOfWeek": "wednesday",
+   "from": "09:00",
+   "to": "19:30"
+  },
+  {
+   "open": true,
+   "dayOfWeek": "thursday",
+   "from": "09:00",
+   "to": "19:30"
+  },
+  {
+   "open": true,
+   "dayOfWeek": "friday",
+   "from": "09:00",
+   "to": "19:30"
+  },
+  {
+   "open": true,
+   "dayOfWeek": "saturday",
+   "from": "09:00",
+   "to": "19:30"
+  },
+  {
+   "open": false,
+   "dayOfWeek": "sunday"
+  }
+ ],
+ "location": {
+  "address": {
+   "countryId": 94,
+   "postalCode": "81667",
+   "addressLines": [
+    "Wörthstraße 40",
+    "München, Haidhausen"
+   ]
+  },
+  "point": {
+   "lat": 48.1288517,
+   "lon": 11.6020524
+  },
+  "map": {
+   "zoom": 16,
+   "lat": 48.1288517,
+   "lon": 11.6020524
+  },
+  "tree": {
+   "id": 68163,
+   "name": "Au-Haidhausen, München",
+   "countryCode": "DE",
+   "normalisedName": "au-haidhausen-muenchen-de",
+   "type": "area",
+   "point": {
+    "lat": 48.12894,
+    "lon": 11.600575
+   },
+   "radius": {
+    "distance": 2.27711189,
+    "distanceUnit": "kilometre"
+   }
+  }
+ },
+ "description": "\n<p>Mitten in München-Haidhausen wirst du in moderner Atmosphäre bei Die Friseure aus Haidhausen bestens betreut. Das umfangreiche Angebot des Salons in der Wörthstraße 40 reicht von trendigen Schnitten, über Foliensträhnen, bis hin zu Nageldesign und Haarentfernung. Deinen Wunschtermin buchst du dir einfach und bequem online oder per App mit Treatwell!</p>\n \n<p>Hier wirst du von dem professionellen und fachkompetenten Team nicht nur umfangreich zu Methoden, Techniken und Haarpflege beraten, sondern auch typgerecht gestylt.</p>\n \n<p>Die Friseure aus Haidhausen bemühen sich darum aus deinem Friseurbesuch ein unvergessliches Erlebnis zu machen, auf das du dich immer wieder freuen kannst. Lass dich bei einer exquisiten Kaffeespezialität, hochklassigen Pflege- und Stylingprodukten von Wella und Londa, sowie Nagelpflegeprodukten von Maha-Shellac und Jolifin verwöhnen und genieße deinen Verwöhntermin.</p>\n ",
+ "productBrands": [
+  {
+   "name": "CND Shellac",
+   "image": {
+    "id": 1052846,
+    "uris": {
+     "197x40": "https://cdn1.treatwell.net/images/view/v2.i1052846.w197.h40.x4A0A4FF4.png"
+    }
+   }
+  }
+ ],
+ "amenityGroups": [],
+ "employees": [
+  {
+   "id": 116747,
+   "name": "Damen Team.  1",
+   "title": "",
+   "description": "",
+   "image": {
+    "id": 15152089,
+    "uris": {
+     "68x68": "https://cdn1.treatwell.net/images/view/v2.i15152089.w68.h68.x786A4380/",
+     "196x196": "https://cdn1.treatwell.net/images/view/v2.i15152089.w196.h196.xC1D0BF9E/",
+     "128x128": "https://cdn1.treatwell.net/images/view/v2.i15152089.w128.h128.xC499363C/",
+     "256x256": "https://cdn1.treatwell.net/images/view/v2.i15152089.w256.h256.x01226897/"
+    }
+   },
+   "portfolioImages": [],
+   "portfolioSentiments": [
+    {
+     "id": 1,
+     "label": "Kompetent",
+     "count": 70
+    },
+    {
+     "id": 12,
+     "label": "Aufmerksam",
+     "count": 27
+    },
+    {
+     "id": 10,
+     "label": "Erfahren",
+     "count": 38
+    },
+    {
+     "id": 8,
+     "label": "Geschult",
+     "count": 9
+    },
+    {
+     "id": 9,
+     "label": "Herzlich",
+     "count": 43
+    },
+    {
+     "id": 2,
+     "label": "Professionell",
+     "count": 81
+    },
+    {
+     "id": 3,
+     "label": "Freundlich",
+     "count": 53
+    },
+    {
+     "id": 4,
+     "label": "Effizient",
+     "count": 21
+    },
+    {
+     "id": 6,
+     "label": "Detailverliebt",
+     "count": 16
+    },
+    {
+     "id": 7,
+     "label": "Fürsorglich",
+     "count": 15
+    },
+    {
+     "id": 15,
+     "label": "Sympathisch",
+     "count": 39
+    },
+    {
+     "id": 14,
+     "label": "Gründlich",
+     "count": 14
+    },
+    {
+     "id": 11,
+     "label": "Außergewöhnlich",
+     "count": 15
+    },
+    {
+     "id": 16,
+     "label": "Talentiert",
+     "count": 49
+    }
+   ],
+   "providesServices": true,
+   "employeeReviews": {
+    "count": 1220,
+    "overallRating": 4.78,
+    "show": true,
+    "displayRating": "4.8"
+   },
+   "treatmentCategoryGroups": [
+    {
+     "id": 6,
+     "name": "Friseur"
+    },
+    {
+     "id": 4,
+     "name": "Gesicht"
+    }
+   ]
+  },
+  {
+   "id": 396687,
+   "name": "Herren Team.1",
+   "title": "",
+   "description": "",
+   "image": {
+    "id": 16598878,
+    "uris": {
+     "68x68": "https://cdn1.treatwell.net/images/view/v2.i16598878.w68.h68.xBF3D26E7/",
+     "196x196": "https://cdn1.treatwell.net/images/view/v2.i16598878.w196.h196.x851C8A6C/",
+     "128x128": "https://cdn1.treatwell.net/images/view/v2.i16598878.w128.h128.x134CA733/",
+     "256x256": "https://cdn1.treatwell.net/images/view/v2.i16598878.w256.h256.x3B60DF65/"
+    }
+   },
+   "portfolioImages": [],
+   "portfolioSentiments": [
+    {
+     "id": 1,
+     "label": "Kompetent",
+     "count": 37
+    },
+    {
+     "id": 8,
+     "label": "Geschult",
+     "count": 5
+    },
+    {
+     "id": 6,
+     "label": "Detailverliebt",
+     "count": 7
+    },
+    {
+     "id": 9,
+     "label": "Herzlich",
+     "count": 5
+    },
+    {
+     "id": 2,
+     "label": "Professionell",
+     "count": 49
+    },
+    {
+     "id": 17,
+     "label": "Rücksichtsvoll",
+     "count": 7
+    },
+    {
+     "id": 12,
+     "label": "Aufmerksam",
+     "count": 13
+    },
+    {
+     "id": 10,
+     "label": "Erfahren",
+     "count": 18
+    },
+    {
+     "id": 3,
+     "label": "Freundlich",
+     "count": 25
+    },
+    {
+     "id": 14,
+     "label": "Gründlich",
+     "count": 13
+    },
+    {
+     "id": 4,
+     "label": "Effizient",
+     "count": 27
+    },
+    {
+     "id": 15,
+     "label": "Sympathisch",
+     "count": 20
+    },
+    {
+     "id": 16,
+     "label": "Talentiert",
+     "count": 19
+    }
+   ],
+   "providesServices": true,
+   "employeeReviews": {
+    "count": 588,
+    "overallRating": 4.42,
+    "show": true,
+    "displayRating": "4.4"
+   },
+   "treatmentCategoryGroups": [
+    {
+     "id": 6,
+     "name": "Friseur"
+    },
+    {
+     "id": 4,
+     "name": "Gesicht"
+    }
+   ]
+  },
+  {
+   "id": 560191,
+   "name": "Herren Team .2",
+   "title": "",
+   "description": "",
+   "image": {
+    "id": 17079719,
+    "uris": {
+     "68x68": "https://cdn1.treatwell.net/images/view/v2.i17079719.w68.h68.x884563B6/",
+     "196x196": "https://cdn1.treatwell.net/images/view/v2.i17079719.w196.h196.x90FA39F6/",
+     "128x128": "https://cdn1.treatwell.net/images/view/v2.i17079719.w128.h128.xFF4ECCAC/",
+     "256x256": "https://cdn1.treatwell.net/images/view/v2.i17079719.w256.h256.xE7FA11BC/"
+    }
+   },
+   "portfolioImages": [],
+   "portfolioSentiments": [
+    {
+     "id": 2,
+     "label": "Professionell",
+     "count": 6
+    },
+    {
+     "id": 1,
+     "label": "Kompetent",
+     "count": 6
+    },
+    {
+     "id": 3,
+     "label": "Freundlich",
+     "count": 8
+    }
+   ],
+   "providesServices": true,
+   "employeeReviews": {
+    "count": 119,
+    "overallRating": 4.42,
+    "show": true,
+    "displayRating": "4.4"
+   },
+   "treatmentCategoryGroups": [
+    {
+     "id": 6,
+     "name": "Friseur"
+    },
+    {
+     "id": 4,
+     "name": "Gesicht"
+    }
+   ]
+  },
+  {
+   "id": 343536,
+   "name": "Damen Team.",
+   "title": "",
+   "description": "",
+   "image": {
+    "id": 17077543,
+    "uris": {
+     "68x68": "https://cdn1.treatwell.net/images/view/v2.i17077543.w68.h68.xFAECF8BC/",
+     "196x196": "https://cdn1.treatwell.net/images/view/v2.i17077543.w196.h196.xF3B78334/",
+     "128x128": "https://cdn1.treatwell.net/images/view/v2.i17077543.w128.h128.x8051DA3F/",
+     "256x256": "https://cdn1.treatwell.net/images/view/v2.i17077543.w256.h256.x9581DDC8/"
+    }
+   },
+   "portfolioImages": [],
+   "portfolioSentiments": [
+    {
+     "id": 16,
+     "label": "Talentiert",
+     "count": 27
+    },
+    {
+     "id": 4,
+     "label": "Effizient",
+     "count": 12
+    },
+    {
+     "id": 6,
+     "label": "Detailverliebt",
+     "count": 11
+    },
+    {
+     "id": 15,
+     "label": "Sympathisch",
+     "count": 37
+    },
+    {
+     "id": 8,
+     "label": "Geschult",
+     "count": 12
+    },
+    {
+     "id": 1,
+     "label": "Kompetent",
+     "count": 52
+    },
+    {
+     "id": 11,
+     "label": "Außergewöhnlich",
+     "count": 7
+    },
+    {
+     "id": 2,
+     "label": "Professionell",
+     "count": 48
+    },
+    {
+     "id": 7,
+     "label": "Fürsorglich",
+     "count": 12
+    },
+    {
+     "id": 17,
+     "label": "Rücksichtsvoll",
+     "count": 6
+    },
+    {
+     "id": 3,
+     "label": "Freundlich",
+     "count": 30
+    },
+    {
+     "id": 9,
+     "label": "Herzlich",
+     "count": 27
+    },
+    {
+     "id": 14,
+     "label": "Gründlich",
+     "count": 22
+    },
+    {
+     "id": 10,
+     "label": "Erfahren",
+     "count": 27
+    },
+    {
+     "id": 12,
+     "label": "Aufmerksam",
+     "count": 23
+    }
+   ],
+   "providesServices": true,
+   "employeeReviews": {
+    "count": 777,
+    "overallRating": 4.69,
+    "show": true,
+    "displayRating": "4.7"
+   },
+   "treatmentCategoryGroups": [
+    {
+     "id": 6,
+     "name": "Friseur"
+    },
+    {
+     "id": 4,
+     "name": "Gesicht"
+    }
+   ]
+  }
+ ],
+ "images": [
+  {
+   "id": 1412671,
+   "uris": {
+    "360x240": "https://cdn1.treatwell.net/images/view/v2.i1412671.w360.h240.xF044EF3C/",
+    "1080x720": "https://cdn1.treatwell.net/images/view/v2.i1412671.w1080.h720.x17A1D01A/",
+    "720x480": "https://cdn1.treatwell.net/images/view/v2.i1412671.w720.h480.x03F61487/",
+    "1280x800": "https://cdn1.treatwell.net/images/view/v2.i1412671.w1280.h800.x5A94AB9A/"
+   }
+  },
+  {
+   "id": 1412672,
+   "uris": {
+    "360x240": "https://cdn1.treatwell.net/images/view/v2.i1412672.w360.h240.x3445CCC3/",
+    "1080x720": "https://cdn1.treatwell.net/images/view/v2.i1412672.w1080.h720.xA41F9341/",
+    "720x480": "https://cdn1.treatwell.net/images/view/v2.i1412672.w720.h480.x65171927/",
+    "1280x800": "https://cdn1.treatwell.net/images/view/v2.i1412672.w1280.h800.x5C5FED7B/"
+   }
+  },
+  {
+   "id": 1412673,
+   "uris": {
+    "360x240": "https://cdn1.treatwell.net/images/view/v2.i1412673.w360.h240.xC60A3547/",
+    "1080x720": "https://cdn1.treatwell.net/images/view/v2.i1412673.w1080.h720.x242A9142/",
+    "720x480": "https://cdn1.treatwell.net/images/view/v2.i1412673.w720.h480.x5C61746F/",
+    "1280x800": "https://cdn1.treatwell.net/images/view/v2.i1412673.w1280.h800.xFB1F702E/"
+   }
+  },
+  {
+   "id": 1412674,
+   "uris": {
+    "360x240": "https://cdn1.treatwell.net/images/view/v2.i1412674.w360.h240.x7B5D5E91/",
+    "1080x720": "https://cdn1.treatwell.net/images/view/v2.i1412674.w1080.h720.x62418AD9/",
+    "720x480": "https://cdn1.treatwell.net/images/view/v2.i1412674.w720.h480.x0A6B4080/",
+    "1280x800": "https://cdn1.treatwell.net/images/view/v2.i1412674.w1280.h800.xE6E3F271/"
+   }
+  },
+  {
+   "id": 1412675,
+   "uris": {
+    "360x240": "https://cdn1.treatwell.net/images/view/v2.i1412675.w360.h240.xF236EBD3/",
+    "1080x720": "https://cdn1.treatwell.net/images/view/v2.i1412675.w1080.h720.x14466288/",
+    "720x480": "https://cdn1.treatwell.net/images/view/v2.i1412675.w720.h480.xF6014586/",
+    "1280x800": "https://cdn1.treatwell.net/images/view/v2.i1412675.w1280.h800.x721E3835/"
+   }
+  },
+  {
+   "id": 1412676,
+   "uris": {
+    "360x240": "https://cdn1.treatwell.net/images/view/v2.i1412676.w360.h240.x6204EC89/",
+    "1080x720": "https://cdn1.treatwell.net/images/view/v2.i1412676.w1080.h720.xBFA7D79C/",
+    "720x480": "https://cdn1.treatwell.net/images/view/v2.i1412676.w720.h480.xA2ECF9C0/",
+    "1280x800": "https://cdn1.treatwell.net/images/view/v2.i1412676.w1280.h800.x0556C062/"
+   }
+  },
+  {
+   "id": 1412677,
+   "uris": {
+    "360x240": "https://cdn1.treatwell.net/images/view/v2.i1412677.w360.h240.xAA988810/",
+    "1080x720": "https://cdn1.treatwell.net/images/view/v2.i1412677.w1080.h720.x34A2FB4B/",
+    "720x480": "https://cdn1.treatwell.net/images/view/v2.i1412677.w720.h480.xFC071168/",
+    "1280x800": "https://cdn1.treatwell.net/images/view/v2.i1412677.w1280.h800.x776663CE/"
+   }
+  },
+  {
+   "id": 1412678,
+   "uris": {
+    "360x240": "https://cdn1.treatwell.net/images/view/v2.i1412678.w360.h240.x4035740D/",
+    "1080x720": "https://cdn1.treatwell.net/images/view/v2.i1412678.w1080.h720.xA13DACEA/",
+    "720x480": "https://cdn1.treatwell.net/images/view/v2.i1412678.w720.h480.x04EDF7DA/",
+    "1280x800": "https://cdn1.treatwell.net/images/view/v2.i1412678.w1280.h800.x017E7CFA/"
+   }
+  },
+  {
+   "id": 1412679,
+   "uris": {
+    "360x240": "https://cdn1.treatwell.net/images/view/v2.i1412679.w360.h240.x020C4528/",
+    "1080x720": "https://cdn1.treatwell.net/images/view/v2.i1412679.w1080.h720.xD52E5A90/",
+    "720x480": "https://cdn1.treatwell.net/images/view/v2.i1412679.w720.h480.x20578AC4/",
+    "1280x800": "https://cdn1.treatwell.net/images/view/v2.i1412679.w1280.h800.x70E4BABC/"
+   }
+  },
+  {
+   "id": 1412681,
+   "uris": {
+    "360x240": "https://cdn1.treatwell.net/images/view/v2.i1412681.w360.h240.xE7440F6E/",
+    "1080x720": "https://cdn1.treatwell.net/images/view/v2.i1412681.w1080.h720.xE5082AA9/",
+    "720x480": "https://cdn1.treatwell.net/images/view/v2.i1412681.w720.h480.x53E1D7B1/",
+    "1280x800": "https://cdn1.treatwell.net/images/view/v2.i1412681.w1280.h800.x107B6FEE/"
+   }
+  },
+  {
+   "id": 16257138,
+   "uris": {
+    "360x240": "https://cdn1.treatwell.net/images/view/v2.i16257138.w360.h240.xAC9A410D/",
+    "1080x720": "https://cdn1.treatwell.net/images/view/v2.i16257138.w1080.h720.x58645E3C/",
+    "720x480": "https://cdn1.treatwell.net/images/view/v2.i16257138.w720.h480.x2AE18A25/",
+    "1280x800": "https://cdn1.treatwell.net/images/view/v2.i16257138.w1280.h800.xD38401A9/"
+   }
+  }
+ ],
+ "reviews": [
+  {
+   "id": 29842954,
+   "reviewer": {
+    "anonymous": false,
+    "name": "Tamara",
+    "personaType": "P"
+   },
+   "createdAt": "2026-09-26T18:24:25Z",
+   "visitedAt": "2026-09-26",
+   "content": {
+    "content": "Wie immer war alles perfekt :) bis zum nächsten Mal!",
+    "generated": false
+   },
+   "verified": true,
+   "rating": 5,
+   "treatmentNames": [
+    "Damen - Strähnen halber Kopf"
+   ],
+   "employeeDescription": "Gestylt von Damen Team.  1"
+  },
+  {
+   "id": 29828890,
+   "reviewer": {
+    "anonymous": false,
+    "name": "Sabine",
+    "personaType": "P"
+   },
+   "createdAt": "2026-09-25T15:58:33Z",
+   "visitedAt": "2026-09-23",
+   "content": {
+    "content": "wie im ein tiller Schnitt, und sehr unkompliziert",
+    "generated": false
+   },
+   "verified": true,
+   "rating": 5,
+   "treatmentNames": [
+    "Damenhaarschnitt"
+   ],
+   "employeeDescription": "Gestylt von Damen Team.  1"
+  },
+  {
+   "id": 29791585,
+   "reviewer": {
+    "anonymous": false,
+    "name": "Thomas",
+    "personaType": "P"
+   },
+   "createdAt": "2026-09-22T19:54:53Z",
+   "visitedAt": "2026-09-22",
+   "content": {
+    "content": "Super unkompliziert und gutes Ergebnis, sehr zufrieden in Summe",
+    "generated": false
+   },
+   "verified": true,
+   "rating": 5,
+   "treatmentNames": [
+    "Herrenhaarschnitt"
+   ],
+   "employeeDescription": "Gestylt von Herren Team.1"
+  },
+  {
+   "id": 29791172,
+   "reviewer": {
+    "anonymous": false,
+    "name": "Maria",
+    "personaType": "P"
+   },
+   "createdAt": "2026-09-22T18:59:35Z",
+   "visitedAt": "2026-09-19",
+   "content": {
+    "content": "Ich bin sehr zufrieden! Ich fand den Haarschnitt und die Pflege super. Danke Tina!",
+    "generated": false
+   },
+   "verified": true,
+   "rating": 5,
+   "treatmentNames": [
+    "Damenhaarschnitt"
+   ],
+   "employeeDescription": "Gestylt von Damen Team."
+  },
+  {
+   "id": 29784632,
+   "reviewer": {
+    "anonymous": false,
+    "name": "Leonardo",
+    "personaType": "P"
+   },
+   "createdAt": "2026-09-22T10:17:03Z",
+   "visitedAt": "2026-09-22",
+   "content": {
+    "content": "Molto bene",
+    "generated": false
+   },
+   "verified": true,
+   "rating": 5,
+   "treatmentNames": [
+    "Herrenhaarschnitt"
+   ],
+   "employeeDescription": "Gestylt von Herren Team.1"
+  }
+ ],
+ "menu": [
+  {
+   "gruppe": "Damen - Haarschnitte & Stylings",
+   "leistungen": [
+    {
+     "name": "Damen - Waschen, Schneiden & Föhnen inkl.  Pflege",
+     "beschreibung": "Ein perfekter Damenschnitt stellt die ultimative Basis für einfaches Styling im heimischen Badezimmer dar. Ob nun glattes langes, welliges oder lockiges Haar, die Treatwell-Friseure nutzen diverse handwerkliche Techniken, um aus jedem Haartyp das Beste herauszuholen.",
+     "preis_min": "43.00",
+     "preis_max": "62.00",
+     "dauer_min": 40,
+     "dauer_max": 50,
+     "varianten": [
+      {
+       "name": "kurz",
+       "preis_min": "43.00",
+       "preis_max": "43.00",
+       "min": 40,
+       "max": 40
+      },
+      {
+       "name": "mittel",
+       "preis_min": "53.00",
+       "preis_max": "53.00",
+       "min": 50,
+       "max": 50
+      },
+      {
+       "name": "Extra lang",
+       "preis_min": "62.00",
+       "preis_max": "62.00",
+       "min": 50,
+       "max": 50
+      }
+     ]
+    },
+    {
+     "name": "Damen - Waschen & Schneiden",
+     "beschreibung": "Ein perfekter Damenschnitt stellt die ultimative Basis für einfaches Styling im heimischen Badezimmer dar. Ob nun glattes langes, welliges oder lockiges Haar, die Treatwell-Friseure nutzen diverse handwerkliche Techniken, um aus jedem Haartyp das Beste herauszuholen.",
+     "preis_min": "33.00",
+     "preis_max": "42.00",
+     "dauer_min": 35,
+     "dauer_max": 45,
+     "varianten": [
+      {
+       "name": "kurz",
+       "preis_min": "33.00",
+       "preis_max": "33.00",
+       "min": 35,
+       "max": 35
+      },
+      {
+       "name": "lang",
+       "preis_min": "38.00",
+       "preis_max": "38.00",
+       "min": 45,
+       "max": 45
+      },
+      {
+       "name": "Extra lang",
+       "preis_min": "42.00",
+       "preis_max": "42.00",
+       "min": 45,
+       "max": 45
+      }
+     ]
+    },
+    {
+     "name": "Damen - Keratin ab,",
+     "beschreibung": "Wer den Satz „Hast du schöne Locken“ schon seit seiner Jugend satt hat, findet für einen seidigen Straighten Look inzwischen fast so viele Möglichkeiten wie Haare auf seinem Kopf. Zwischen dem häufigen professionellen Einsatz eines Glätteisens und der chemisch-thermischen Dauer-Umformung per Brazilian Blowout gibt es viele schonende und flexible Anwendungen.",
+     "preis_min": "230.00",
+     "preis_max": "230.00",
+     "dauer_min": 240,
+     "dauer_max": 240,
+     "varianten": [
+      {
+       "name": "3 stunden",
+       "preis_min": "230.00",
+       "preis_max": "230.00",
+       "min": 240,
+       "max": 240
+      }
+     ]
+    },
+    {
+     "name": "Damen - Waschen & Föhnen",
+     "beschreibung": "\nFr&uuml;her nur bekannt als Finale der coiffeuresken Dreifaltigkeit Waschen-Schneiden-F&ouml;hnen, hat sich das F&ouml;hnen als eigenst&auml;ndige Behandlung unter dem amerikanisierten Titel Blow Dry als Verw&ouml;hnbehandlung und Megatipp f&uuml;r seidig gl&auml;nzendes, softes und volumin&ouml;ses Red Carpet-Haar etabliert. 20 Minuten und ein F&ouml;hn in Profih&auml;nden gelten als Erf&uuml;llung.\n\n",
+     "preis_min": "26.00",
+     "preis_max": "36.00",
+     "dauer_min": 30,
+     "dauer_max": 30,
+     "varianten": [
+      {
+       "name": "kurz",
+       "preis_min": "26.00",
+       "preis_max": "26.00",
+       "min": 30,
+       "max": 30
+      },
+      {
+       "name": "mittel",
+       "preis_min": "31.00",
+       "preis_max": "31.00",
+       "min": 30,
+       "max": 30
+      },
+      {
+       "name": "lang",
+       "preis_min": "36.00",
+       "preis_max": "36.00",
+       "min": 30,
+       "max": 30
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "gruppe": "Damen - Coloration ",
+   "leistungen": [
+    {
+     "name": "Damen - Strähnen ganzer Kopf.",
+     "beschreibung": null,
+     "preis_min": "105.00",
+     "preis_max": "105.00",
+     "dauer_min": 120,
+     "dauer_max": 120,
+     "varianten": [
+      {
+       "name": "Damen - Strähnen ganzer Kopf.",
+       "preis_min": "105.00",
+       "preis_max": "105.00",
+       "min": 120,
+       "max": 120
+      }
+     ]
+    },
+    {
+     "name": "Damen - Färben, Waschen, Schneiden & Föhnen  .",
+     "beschreibung": null,
+     "preis_min": "84.00",
+     "preis_max": "124.00",
+     "dauer_min": 90,
+     "dauer_max": 90,
+     "varianten": [
+      {
+       "name": "kurz",
+       "preis_min": "84.00",
+       "preis_max": "84.00",
+       "min": 90,
+       "max": 90
+      },
+      {
+       "name": "lang",
+       "preis_min": "104.00",
+       "preis_max": "104.00",
+       "min": 90,
+       "max": 90
+      },
+      {
+       "name": "Extra lang",
+       "preis_min": "124.00",
+       "preis_max": "124.00",
+       "min": 90,
+       "max": 90
+      }
+     ]
+    },
+    {
+     "name": "Damen - Strähnen halber Kopf.",
+     "beschreibung": null,
+     "preis_min": "75.00",
+     "preis_max": "75.00",
+     "dauer_min": 90,
+     "dauer_max": 90,
+     "varianten": [
+      {
+       "name": "Damen - Strähnen halber Kopf.",
+       "preis_min": "75.00",
+       "preis_max": "75.00",
+       "min": 90,
+       "max": 90
+      }
+     ]
+    },
+    {
+     "name": "Damen - Balayage, Waschen, Schneiden & Föhnen",
+     "beschreibung": null,
+     "preis_min": "202.00",
+     "preis_max": "202.00",
+     "dauer_min": 180,
+     "dauer_max": 180,
+     "varianten": [
+      {
+       "name": "3 stunden",
+       "preis_min": "202.00",
+       "preis_max": "202.00",
+       "min": 180,
+       "max": 180
+      }
+     ]
+    },
+    {
+     "name": "Damen - Strähnen halber Kopf Schnitt & Föhnen",
+     "beschreibung": "\nDu m&ouml;chtest deiner Frisur das besondere Etwas verleihen? Mit dem Str&auml;hnen-Look kannst du deinen Haaren einen Frischekick verpassen und sie wieder in neuem Glanz erstrahlen lassen. Ob nat&uuml;rliche blonde Highlights oder Str&auml;hnen in einer dunkleren oder ausgefalleneren Farbe, jede Art verleiht deinen Haaren das gewisse Extra. Bei den Oberkopfstr&auml;hnen werden die L&auml;ngen ausgelassen und nur der obere Teil gef&auml;rbt. In Kombination mit einem Haarschnitt und anschlie&szlig;endem F&ouml;hnen ist dein neues Haarstyling komplett.\n\n",
+     "preis_min": "117.00",
+     "preis_max": "127.00",
+     "dauer_min": 120,
+     "dauer_max": 150,
+     "varianten": [
+      {
+       "name": "kurz",
+       "preis_min": "117.00",
+       "preis_max": "117.00",
+       "min": 120,
+       "max": 120
+      },
+      {
+       "name": "mittel",
+       "preis_min": "127.00",
+       "preis_max": "127.00",
+       "min": 150,
+       "max": 150
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "gruppe": "Herren - Haarschnitte & Stylings",
+   "leistungen": [
+    {
+     "name": "Herren - Waschen, Schneiden & Föhnen",
+     "beschreibung": "\nDas rundum sorglos Paket der Friseure ist Waschen-Schneiden-F&ouml;hnen. Hier kannst dich entspannt zur&uuml;cklehnen und dich erwartet am Ende ein neuer Haarschnitt mit dem perfekt abgestimmten Styling.\n\n",
+     "preis_min": "25.00",
+     "preis_max": "25.00",
+     "dauer_min": 30,
+     "dauer_max": 30,
+     "varianten": [
+      {
+       "name": "Herren - Waschen, Schneiden & Föhnen",
+       "preis_min": "25.00",
+       "preis_max": "25.00",
+       "min": 30,
+       "max": 30
+      }
+     ]
+    },
+    {
+     "name": "Herren - Haarschnitt",
+     "beschreibung": "\nUm das Attribut grandios zu verdienen, muss ein M&auml;nnerhaarschnitt nicht nur exakt die Pers&ouml;nlichkeit seines Tr&auml;gers vollenden und ausdr&uuml;cken, er muss auch mit diversen Werkzeugen und Schnitttechniken ausgef&uuml;hrt werden. Der legend&auml;re Two-Dollar-Haircut, bei dem lediglich mit der Schneidemaschine alles auf eine L&auml;nge gestutzt wird, kann zwar auch gefallen und dem einen oder anderen blendend zu Gesichte stehen. Aber wir widmen uns hier der hohen Schule.\n\n",
+     "preis_min": "22.00",
+     "preis_max": "22.00",
+     "dauer_min": 25,
+     "dauer_max": 25,
+     "varianten": [
+      {
+       "name": "Herren - Haarschnitt",
+       "preis_min": "22.00",
+       "preis_max": "22.00",
+       "min": 25,
+       "max": 25
+      }
+     ]
+    },
+    {
+     "name": "Herren - Rasur",
+     "beschreibung": "\nDie perfekte Bartrasur ist heute genauso wichtig wie ein gr&uuml;ndlicher und sauberer Haarschnitt. Jeder Mann wei&szlig;, dass man ohne einen gepflegten Bart nicht vollst&auml;ndig zurechtgemacht ist.\n\n",
+     "preis_min": "15.00",
+     "preis_max": "15.00",
+     "dauer_min": 20,
+     "dauer_max": 20,
+     "varianten": [
+      {
+       "name": "Herren - Rasur",
+       "preis_min": "15.00",
+       "preis_max": "15.00",
+       "min": 20,
+       "max": 20
+      }
+     ]
+    },
+    {
+     "name": "Herren - Waschen,Schniden, Rasur",
+     "beschreibung": "\nGanz gleich, ob du ein Typ bist, der genau wei&szlig;, was er will, oder jemand, der ein wenig Anleitung von einem Stylisten braucht - das Team dieses Salons hat das Talent, die Fertigkeit und das Fingerspitzengef&uuml;hl, zum perfekten Haarschnitt vorzuweisen. Ein Haarstyling ist alles, was du zur Unterst&uuml;tzung brauchst, um dich selbstbewusst, fokussiert und zu allem bereit zu f&uuml;hlen.\n\n",
+     "preis_min": "36.00",
+     "preis_max": "36.00",
+     "dauer_min": 45,
+     "dauer_max": 45,
+     "varianten": [
+      {
+       "name": "Herren - Waschen,Schniden, Rasur",
+       "preis_min": "36.00",
+       "preis_max": "36.00",
+       "min": 45,
+       "max": 45
+      }
+     ]
+    },
+    {
+     "name": "Herren - Farbe, Schnitt & Föhnen.",
+     "beschreibung": "\nImmer wenn die Naturhaarfarbe nicht mehr zum Trend passt oder nicht ganz typgerecht ausf&auml;llt, haben die Colorations-Experten eine L&ouml;sung parat. Damit das Ergebnis sensationell ausf&auml;llt, muss zun&auml;chst eine realistische Farbwahl getroffen und das passende Produkt gefunden werden. Wenn es um Farbe geht, sollte ein ausgewiesener Experte Hand anlegen.\n\n",
+     "preis_min": "55.00",
+     "preis_max": "55.00",
+     "dauer_min": 90,
+     "dauer_max": 90,
+     "varianten": [
+      {
+       "name": "Herren - Farbe, Schnitt & Föhnen.",
+       "preis_min": "55.00",
+       "preis_max": "55.00",
+       "min": 90,
+       "max": 90
+      }
+     ]
+    },
+    {
+     "name": "Herren - Strähnen, Schnitt & Föhnen.",
+     "beschreibung": "\nStr&auml;hnen machen jede Frisur zum Hingucker. Sie definieren den Haarschnitt durch klare Linien und k&ouml;nnen sogar feines Haar volumin&ouml;ser wirken lassen.\n\n",
+     "preis_min": "65.00",
+     "preis_max": "65.00",
+     "dauer_min": 120,
+     "dauer_max": 120,
+     "varianten": [
+      {
+       "name": "Herren - Strähnen, Schnitt & Föhnen.",
+       "preis_min": "65.00",
+       "preis_max": "65.00",
+       "min": 120,
+       "max": 120
+      }
+     ]
+    },
+    {
+     "name": "Herren - Waschen, Schneiden & Föhnen .lange haare",
+     "beschreibung": "\nDas rundum sorglos Paket der Friseure ist Waschen-Schneiden-F&ouml;hnen. Hier kannst dich entspannt zur&uuml;cklehnen und dich erwartet am Ende ein neuer Haarschnitt mit dem perfekt abgestimmten Styling.\n\n",
+     "preis_min": "32.00",
+     "preis_max": "32.00",
+     "dauer_min": 40,
+     "dauer_max": 40,
+     "varianten": [
+      {
+       "name": "Herren - Waschen, Schneiden & Föhnen .lange haare",
+       "preis_min": "32.00",
+       "preis_max": "32.00",
+       "min": 40,
+       "max": 40
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "gruppe": "Damen - Farbe & Coloration",
+   "leistungen": [
+    {
+     "name": "Damen - Balayage ab",
+     "beschreibung": "\nFreihand und dennoch mit Bedacht tr&auml;gt der Friseur mittels Pinsel die vermutlich &auml;sthetischste Str&auml;hnchen-Art auf, die wirklich jede Art von mittel- bis langem Haar besonders macht. Die mit Schwung (vom Frz. balayer = kehren) platzierten, leicht aufhellenden Striche werten jeden Undone-Look auf. Genial: Selbst beim Herauswachsen sehen die Balayage-Str&auml;hnen noch supertrendy und gepflegt aus.\n\n",
+     "preis_min": "150.00",
+     "preis_max": "150.00",
+     "dauer_min": 120,
+     "dauer_max": 120,
+     "varianten": [
+      {
+       "name": "Damen - Balayage ab",
+       "preis_min": "150.00",
+       "preis_max": "150.00",
+       "min": 120,
+       "max": 120
+      }
+     ]
+    },
+    {
+     "name": "Damen - Strähnen ganzer Kopf, Schnitt & Föhnen",
+     "beschreibung": null,
+     "preis_min": "147.00",
+     "preis_max": "157.00",
+     "dauer_min": 120,
+     "dauer_max": 150,
+     "varianten": [
+      {
+       "name": "kurz",
+       "preis_min": "147.00",
+       "preis_max": "147.00",
+       "min": 120,
+       "max": 120
+      },
+      {
+       "name": "lang",
+       "preis_min": "157.00",
+       "preis_max": "157.00",
+       "min": 150,
+       "max": 150
+      }
+     ]
+    },
+    {
+     "name": "Damen - Farbe komplett.",
+     "beschreibung": "\nImmer wenn die Naturhaarfarbe nicht mehr zum Trend passt oder nicht ganz typgerecht ausf&auml;llt, haben die Colorations-Experten auf Treatwell eine L&ouml;sung parat. Damit das Ergebnis sensationell ausf&auml;llt, muss zun&auml;chst eine realistische Farbwahl getroffen &ndash; nicht mit jedem Haar geht alles &ndash; und das passende Produkt gefunden werden. Ob megablond, bunte Dip-Dyes auf halber L&auml;nge, Str&auml;hnentechniken oder Granny-Look &ndash; wenn es um Farbe geht, sollte ein ausgewiesener Experte Hand anlegen.\n\n",
+     "preis_min": "42.00",
+     "preis_max": "62.00",
+     "dauer_min": 40,
+     "dauer_max": 40,
+     "varianten": [
+      {
+       "name": "kurz",
+       "preis_min": "42.00",
+       "preis_max": "42.00",
+       "min": 40,
+       "max": 40
+      },
+      {
+       "name": "mittel",
+       "preis_min": "52.00",
+       "preis_max": "52.00",
+       "min": 40,
+       "max": 40
+      },
+      {
+       "name": "lang",
+       "preis_min": "62.00",
+       "preis_max": "62.00",
+       "min": 40,
+       "max": 40
+      }
+     ]
+    },
+    {
+     "name": "Damen - Foliensträhnen halber,kopf, Schnitt & Föhnen",
+     "beschreibung": "\nBei den sog. Folienstr&auml;hnen werden einzelne Haarstr&auml;hnen mit Farbe bepinselt und f&uuml;r die Einwirkzeit mit Folie verschlossen. Diese Technik f&uuml;hrt zu einem exakten Ergebnis und verhindert Farbkleckse auf dem &uuml;brigen Haar.\n\n",
+     "preis_min": "117.00",
+     "preis_max": "127.00",
+     "dauer_min": 120,
+     "dauer_max": 120,
+     "varianten": [
+      {
+       "name": "kurz",
+       "preis_min": "117.00",
+       "preis_max": "117.00",
+       "min": 120,
+       "max": 120
+      },
+      {
+       "name": "lang",
+       "preis_min": "127.00",
+       "preis_max": "127.00",
+       "min": 120,
+       "max": 120
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "gruppe": "Augenbrauen & Wimpernbehandlungen",
+   "leistungen": [
+    {
+     "name": "Damen - Ansatzfarbe & Föhnen",
+     "beschreibung": "\nEine sorgf&auml;ltig abgestimmte Farbauffrischung, die nur den Haaransatz bedeckt. Abgesehen von der Wiederherstellung des vollst&auml;ndigen Looks hilft dir diese Technik, das unangenehme rauswachsen der Farbe zu vermeiden. Stelle deinen Farbton mit einer perfekten Ansatzfarbe wieder her. Im Anschluss werden die Haare gef&ouml;hnt.\n\n",
+     "preis_min": "55.00",
+     "preis_max": "65.00",
+     "dauer_min": 90,
+     "dauer_max": 90,
+     "varianten": [
+      {
+       "name": "kurz",
+       "preis_min": "55.00",
+       "preis_max": "55.00",
+       "min": 90,
+       "max": 90
+      },
+      {
+       "name": "mittel",
+       "preis_min": "60.00",
+       "preis_max": "60.00",
+       "min": 90,
+       "max": 90
+      },
+      {
+       "name": "lang",
+       "preis_min": "65.00",
+       "preis_max": "65.00",
+       "min": 90,
+       "max": 90
+      }
+     ]
+    },
+    {
+     "name": "Augenbrauen färben & zupfen, Wimpern färben",
+     "beschreibung": "\nDas ultimative Augenpaket, dieses Trio definiert deine Wimpern und Brauen, umrahmt dein Gesicht und verleiht deinen nat&uuml;rlichen Wimpern Tiefe. Als perfekte Vor-Urlaubsbehandlung befreit dich dieses Paket von der t&auml;glichen Routine des Augenbrauen- und Wimpern-Make-ups und enth&uuml;llt einen dauerhaft einsatzbereiten, definierten Look.\n\n",
+     "preis_min": "25.00",
+     "preis_max": "25.00",
+     "dauer_min": 20,
+     "dauer_max": 20,
+     "varianten": [
+      {
+       "name": "Augenbrauen färben & zupfen, Wimpern färben",
+       "preis_min": "25.00",
+       "preis_max": "25.00",
+       "min": 20,
+       "max": 20
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
