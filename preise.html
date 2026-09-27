@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preise · Die Friseure Haidhausen und Ismaning</title>
+<meta name="description" content="Alle Preise von Die Friseure in Haidhausen und Ismaning: Schneiden, Föhnen, Farbe, Strähnen, Balayage, Keratin, Augenbrauen, Maniküre — nach Salon und Haarlänge.">
+<meta name="theme-color" content="#f8f9fa">
+<link rel="preload" href="schrift/Archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="bilder/zeichen.svg" type="image/svg+xml">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body class="preisseite">
+<!--
+  RICHTUNGSVERTRAG (Preisseite)
+  THESE: Fragen statt alles zeigen. Salon und Haarlänge oben wählen, dann steht
+  je Leistung genau ein Preis da. Die Gruppen folgen dem Ablauf im Salon.
+  EIGENE WELT: dieselbe Wand wie die Startseite; die Wahlleiste klebt wie eine
+  Ablage unter der Kopfzeile, mit Eichenkante.
+  FORM: eine Zeile pro Leistung, Preis rechts in Tabellenziffern, Dauer klein
+  darunter. Am Gruppenende der Buchungsweg des gewählten Salons.
+-->
+<a class="sprung" href="#inhalt">Zum Inhalt</a>
+
+<header class="leiste">
+  <div class="leiste-innen mitte">
+    <a class="wortmarke" href="./" aria-label="Die Friseure, zur Startseite">
+      <span class="wortmarke-die">Die</span><span class="wortmarke-wort">Friseure</span>
+    </a>
+    <nav class="leiste-nav" aria-label="Hauptnavigation">
+      <a href="./#team">Team</a>
+      <a href="preise.html" aria-current="page">Preise</a>
+      <a href="./#salon">Salon</a>
+      <a href="./#anfahrt">Anfahrt</a>
+    </nav>
+    <a class="leiste-tel" data-nur="h" href="tel:+498952033549">089 52 03 35 49</a>
+    <a class="leiste-tel" data-nur="i" href="tel:+498924590673">089 24 59 06 73</a>
+    <a class="knopf knopf-lampe leiste-knopf" data-nur="h" href="https://www.treatwell.de/ort/die-friseure-aus-haidhausen/" rel="noopener">Termin</a>
+    <a class="knopf knopf-lampe leiste-knopf" data-nur="i" href="https://www.treatwell.de/ort/die-friseure-aus-ismaning/" rel="noopener">Termin</a>
+  </div>
+</header>
+
+<main id="inhalt" class="preise mitte">
+  <h1>Preise</h1>
+  <p class="preise-satz">Wählen Sie Salon und Haarlänge — dann steht bei jeder Leistung genau ein Preis. Stand: Treatwell, 27. September 2026.</p>
+
+  <form class="ablage" aria-label="Auswahl für die Preisliste" onsubmit="return false">
+    <fieldset class="schalter">
+      <legend>Salon</legend>
+      <input class="wahl-knopf" type="radio" name="salon" id="salon-h" value="haidhausen" checked>
+      <label for="salon-h">Haidhausen</label>
+      <input class="wahl-knopf" type="radio" name="salon" id="salon-i" value="ismaning">
+      <label for="salon-i">Ismaning</label>
+    </fieldset>
+    <fieldset class="schalter">
+      <legend>Haarlänge</legend>
+      <input class="wahl-knopf" type="radio" name="laenge" id="l-k" value="k" checked>
+      <label for="l-k">kurz</label>
+      <input class="wahl-knopf" type="radio" name="laenge" id="l-m" value="m">
+      <label for="l-m">mittel</label>
+      <input class="wahl-knopf" type="radio" name="laenge" id="l-l" value="l">
+      <label for="l-l">lang</label>
+    </fieldset>
+  </form>
+
+  <div class="gruppen">
+<!-- preise:start -->
+<details class="gruppe" name="gruppe" id="schnitt" data-salons="h i" open>
+  <summary><span class="gruppe-titel">Schneiden &amp; Föhnen</span><span class="gruppe-zusatz">Damen</span></summary>
+  <ul class="posten-liste">
+    <li class="posten" data-salon="i" data-laenge><span class="posten-name">Waschen, Schneiden &amp; Föhnen<span class="posten-dauer"><span data-l="k">45 Min.</span><span data-l="m">50 Min.</span><span data-l="l">60 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k">43&nbsp;€</span><span class="betrag" data-l="m">53&nbsp;€</span><span class="betrag" data-l="l">62&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h" data-laenge><span class="posten-name">Waschen, Schneiden &amp; Föhnen, inkl. Pflege<span class="posten-dauer"><span data-l="k">40 Min.</span><span data-l="m">50 Min.</span><span data-l="l">50 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k">43&nbsp;€</span><span class="betrag" data-l="m">53&nbsp;€</span><span class="betrag" data-l="l">62&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h" data-laenge><span class="posten-name">Waschen &amp; Schneiden<span class="posten-dauer"><span data-l="k">35 Min.</span><span data-l="m">45 Min.</span><span data-l="l">45 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k">33&nbsp;€</span><span class="betrag" data-l="m">38&nbsp;€</span><span class="betrag" data-l="l">42&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i" data-laenge><span class="posten-name">Waschen &amp; Schneiden<span class="posten-dauer"><span data-l="k">30 Min.</span><span data-l="m">30 Min.</span><span data-l="l">40 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k">33&nbsp;€</span><span class="betrag" data-l="m">38&nbsp;€</span><span class="betrag" data-l="l">42&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h" data-laenge><span class="posten-name">Waschen &amp; Föhnen<span class="posten-dauer"><span data-l="k">30 Min.</span><span data-l="m">30 Min.</span><span data-l="l">30 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k">26&nbsp;€</span><span class="betrag" data-l="m">31&nbsp;€</span><span class="betrag" data-l="l">36&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i" data-laenge><span class="posten-name">Waschen &amp; Föhnen<span class="posten-dauer"><span data-l="k">30 Min.</span><span data-l="m">30 Min.</span><span data-l="l">45 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k">26&nbsp;€</span><span class="betrag" data-l="m">31&nbsp;€</span><span class="betrag" data-l="l">36&nbsp;€</span></span></li>
+  </ul>
+  <p class="gruppe-weg" data-nur="h"><a class="knopf knopf-linie" href="https://www.treatwell.de/ort/die-friseure-aus-haidhausen/" rel="noopener">In Haidhausen bei Treatwell buchen</a><a class="gruppe-tel" href="tel:+498952033549">oder anrufen: 089 52 03 35 49</a></p>
+  <p class="gruppe-weg" data-nur="i"><a class="knopf knopf-linie" href="https://www.treatwell.de/ort/die-friseure-aus-ismaning/" rel="noopener">In Ismaning bei Treatwell buchen</a><a class="gruppe-tel" href="tel:+498924590673">oder anrufen: 089 24 59 06 73</a></p>
+</details>
+<details class="gruppe" name="gruppe" id="herren" data-salons="h i">
+  <summary><span class="gruppe-titel">Herren</span><span class="gruppe-zusatz">Schnitt, Bart, Farbe</span></summary>
+  <ul class="posten-liste">
+    <li class="posten" data-salon="h"><span class="posten-name">Haarschnitt<span class="posten-dauer"><span data-l="k m l">25 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">22&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Haarschnitt<span class="posten-dauer"><span data-l="k m l">30 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">22&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h i"><span class="posten-name">Waschen, Schneiden &amp; Föhnen<span class="posten-dauer"><span data-l="k m l">30 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">25&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h"><span class="posten-name">Waschen, Schneiden &amp; Föhnen, lange Haare<span class="posten-dauer"><span data-l="k m l">40 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">32&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Waschen, Schneiden &amp; Föhnen, lange Haare<span class="posten-dauer"><span data-l="k m l">30 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">32&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h"><span class="posten-name">Waschen, Schneiden &amp; Rasur<span class="posten-dauer"><span data-l="k m l">45 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">36&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Bart schneiden<span class="posten-dauer"><span data-l="k m l">20 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">15&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h"><span class="posten-name">Rasur<span class="posten-dauer"><span data-l="k m l">20 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">15&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Färben<span class="posten-dauer"><span data-l="k m l">60 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">42&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h"><span class="posten-name">Farbe, Schnitt &amp; Föhnen<span class="posten-dauer"><span data-l="k m l">90 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">55&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Strähnen<span class="posten-dauer"><span data-l="k m l">70 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">60&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h"><span class="posten-name">Strähnen, Schnitt &amp; Föhnen<span class="posten-dauer"><span data-l="k m l">120 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">65&nbsp;€</span></span></li>
+  </ul>
+  <p class="gruppe-weg" data-nur="h"><a class="knopf knopf-linie" href="https://www.treatwell.de/ort/die-friseure-aus-haidhausen/" rel="noopener">In Haidhausen bei Treatwell buchen</a><a class="gruppe-tel" href="tel:+498952033549">oder anrufen: 089 52 03 35 49</a></p>
+  <p class="gruppe-weg" data-nur="i"><a class="knopf knopf-linie" href="https://www.treatwell.de/ort/die-friseure-aus-ismaning/" rel="noopener">In Ismaning bei Treatwell buchen</a><a class="gruppe-tel" href="tel:+498924590673">oder anrufen: 089 24 59 06 73</a></p>
+</details>
+<details class="gruppe" name="gruppe" id="farbe" data-salons="h i">
+  <summary><span class="gruppe-titel">Farbe &amp; Strähnen</span><span class="gruppe-zusatz">Damen</span></summary>
+  <ul class="posten-liste">
+    <li class="posten" data-salon="h" data-laenge><span class="posten-name">Ansatzfarbe &amp; Föhnen<span class="posten-dauer"><span data-l="k">90 Min.</span><span data-l="m">90 Min.</span><span data-l="l">90 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k">55&nbsp;€</span><span class="betrag" data-l="m">60&nbsp;€</span><span class="betrag" data-l="l">65&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h" data-laenge><span class="posten-name">Farbe komplett<span class="posten-dauer"><span data-l="k">40 Min.</span><span data-l="m">40 Min.</span><span data-l="l">40 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k">42&nbsp;€</span><span class="betrag" data-l="m">52&nbsp;€</span><span class="betrag" data-l="l">62&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i" data-laenge><span class="posten-name">Farbe komplett<span class="posten-dauer"><span data-l="k">60 Min.</span><span data-l="m">60 Min.</span><span data-l="l">60 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k">42&nbsp;€</span><span class="betrag" data-l="m">52&nbsp;€</span><span class="betrag" data-l="l">62&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h" data-laenge><span class="posten-name">Farbe komplett, Schnitt &amp; Föhnen<span class="posten-dauer"><span data-l="k">90 Min.</span><span data-l="m">90 Min.</span><span data-l="l">90 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k">84&nbsp;€</span><span class="betrag" data-l="m">104&nbsp;€</span><span class="betrag" data-l="l">124&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i" data-laenge><span class="posten-name">Farbe komplett, Schnitt &amp; Föhnen<span class="posten-dauer"><span data-l="k">90 Min.</span><span data-l="m">105 Min.</span><span data-l="l">105 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k">84&nbsp;€</span><span class="betrag" data-l="m">104&nbsp;€</span><span class="betrag" data-l="l">124&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h"><span class="posten-name">Strähnen, halber Kopf<span class="posten-dauer"><span data-l="k m l">90 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">75&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Strähnen, halber Kopf<span class="posten-dauer"><span data-l="k m l">90 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">77&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h" data-laenge><span class="posten-name">Strähnen halber Kopf, Schnitt &amp; Föhnen<span class="posten-dauer"><span data-l="k">120 Min.</span><span data-l="m l">150 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k">117&nbsp;€</span><span class="betrag" data-l="m l">127&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h" data-laenge><span class="posten-name">Foliensträhnen halber Kopf, Schnitt &amp; Föhnen<span class="posten-dauer"><span data-l="k">120 Min.</span><span data-l="m l">120 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k">117&nbsp;€</span><span class="betrag" data-l="m l">127&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i" data-laenge><span class="posten-name">Foliensträhnen halber Kopf, Schnitt &amp; Föhnen<span class="posten-dauer"><span data-l="k">100 Min.</span><span data-l="m l">110 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k">117&nbsp;€</span><span class="betrag" data-l="m l">127&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h i"><span class="posten-name">Strähnen, ganzer Kopf<span class="posten-dauer"><span data-l="k m l">120 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">105&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h" data-laenge><span class="posten-name">Strähnen ganzer Kopf, Schnitt &amp; Föhnen<span class="posten-dauer"><span data-l="k">120 Min.</span><span data-l="m l">150 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k">147&nbsp;€</span><span class="betrag" data-l="m l">157&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i" data-laenge><span class="posten-name">Strähnen ganzer Kopf, Schnitt &amp; Föhnen<span class="posten-dauer"><span data-l="k">120 Min.</span><span data-l="m l">165 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k">147&nbsp;€</span><span class="betrag" data-l="m l">157&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h i"><span class="posten-name">Balayage<span class="posten-dauer"><span data-l="k m l">120 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l"><span class="ab">ab</span> 150&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h i"><span class="posten-name">Balayage, Schnitt &amp; Föhnen<span class="posten-dauer"><span data-l="k m l">180 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">202&nbsp;€</span></span></li>
+  </ul>
+  <p class="gruppe-weg" data-nur="h"><a class="knopf knopf-linie" href="https://www.treatwell.de/ort/die-friseure-aus-haidhausen/" rel="noopener">In Haidhausen bei Treatwell buchen</a><a class="gruppe-tel" href="tel:+498952033549">oder anrufen: 089 52 03 35 49</a></p>
+  <p class="gruppe-weg" data-nur="i"><a class="knopf knopf-linie" href="https://www.treatwell.de/ort/die-friseure-aus-ismaning/" rel="noopener">In Ismaning bei Treatwell buchen</a><a class="gruppe-tel" href="tel:+498924590673">oder anrufen: 089 24 59 06 73</a></p>
+</details>
+<details class="gruppe" name="gruppe" id="glaetten" data-salons="h">
+  <summary><span class="gruppe-titel">Keratin-Glättung</span><span class="gruppe-zusatz">nur Haidhausen</span></summary>
+  <ul class="posten-liste">
+    <li class="posten" data-salon="h"><span class="posten-name">Brasilianische Keratin-Behandlung<span class="posten-dauer"><span data-l="k m l">240 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l"><span class="ab">ab</span> 230&nbsp;€</span></span></li>
+  </ul>
+  <p class="gruppe-weg" data-nur="h"><a class="knopf knopf-linie" href="https://www.treatwell.de/ort/die-friseure-aus-haidhausen/" rel="noopener">In Haidhausen bei Treatwell buchen</a><a class="gruppe-tel" href="tel:+498952033549">oder anrufen: 089 52 03 35 49</a></p>
+</details>
+<details class="gruppe" name="gruppe" id="augen" data-salons="h i">
+  <summary><span class="gruppe-titel">Augenbrauen &amp; Wimpern</span></summary>
+  <ul class="posten-liste">
+    <li class="posten" data-salon="i"><span class="posten-name">Augenbrauen zupfen<span class="posten-dauer"><span data-l="k m l">10 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">12&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Augenbrauen färben<span class="posten-dauer"><span data-l="k m l">15 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">8&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Wimpern färben<span class="posten-dauer"><span data-l="k m l">10 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">12&nbsp;€</span></span></li>
+    <li class="posten" data-salon="h"><span class="posten-name">Augenbrauen färben &amp; zupfen, Wimpern färben<span class="posten-dauer"><span data-l="k m l">20 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">25&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Gesicht komplett, mit Fadentechnik<span class="posten-dauer"><span data-l="k m l">15 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">22&nbsp;€</span></span></li>
+  </ul>
+  <p class="gruppe-weg" data-nur="h"><a class="knopf knopf-linie" href="https://www.treatwell.de/ort/die-friseure-aus-haidhausen/" rel="noopener">In Haidhausen bei Treatwell buchen</a><a class="gruppe-tel" href="tel:+498952033549">oder anrufen: 089 52 03 35 49</a></p>
+  <p class="gruppe-weg" data-nur="i"><a class="knopf knopf-linie" href="https://www.treatwell.de/ort/die-friseure-aus-ismaning/" rel="noopener">In Ismaning bei Treatwell buchen</a><a class="gruppe-tel" href="tel:+498924590673">oder anrufen: 089 24 59 06 73</a></p>
+</details>
+<details class="gruppe" name="gruppe" id="haende" data-salons="i">
+  <summary><span class="gruppe-titel">Hände &amp; Füße</span><span class="gruppe-zusatz">nur Ismaning</span></summary>
+  <ul class="posten-liste">
+    <li class="posten" data-salon="i"><span class="posten-name">Maniküre<span class="posten-dauer"><span data-l="k m l">30 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">25&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Maniküre mit Lack<span class="posten-dauer"><span data-l="k m l">60 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">30&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Maniküre mit Shellac<span class="posten-dauer"><span data-l="k m l">60 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">45&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Maniküre mit Shellac French<span class="posten-dauer"><span data-l="k m l">80 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">50&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Pediküre<span class="posten-dauer"><span data-l="k m l">60 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">40&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Pediküre mit Lack<span class="posten-dauer"><span data-l="k m l">60 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">45&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Pediküre mit Shellac<span class="posten-dauer"><span data-l="k m l">60 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">50&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Pediküre mit Shellac French<span class="posten-dauer"><span data-l="k m l">90 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">55&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Maniküre &amp; Pediküre<span class="posten-dauer"><span data-l="k m l">90 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">60&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Maniküre &amp; Pediküre mit Lack<span class="posten-dauer"><span data-l="k m l">120 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">75&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Maniküre &amp; Pediküre mit Shellac<span class="posten-dauer"><span data-l="k m l">135 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">95&nbsp;€</span></span></li>
+    <li class="posten" data-salon="i"><span class="posten-name">Shellac entfernen<span class="posten-dauer"><span data-l="k m l">20 Min.</span></span></span><span class="posten-preis"><span class="betrag" data-l="k m l">10&nbsp;€</span></span></li>
+  </ul>
+  <p class="gruppe-weg" data-nur="i"><a class="knopf knopf-linie" href="https://www.treatwell.de/ort/die-friseure-aus-ismaning/" rel="noopener">In Ismaning bei Treatwell buchen</a><a class="gruppe-tel" href="tel:+498924590673">oder anrufen: 089 24 59 06 73</a></p>
+</details>
+<!-- preise:ende -->
+  </div>
+
+  <p class="preise-klein">Die Haarlänge gilt für Damenleistungen mit Längenpreis; alle anderen Preise hängen nicht von der Länge ab. Die Dauer ist ein Richtwert. „ab“ heißt: Der Endpreis richtet sich nach Haar und Aufwand.</p>
+</main>
+
+<footer class="sockel">
+  <div class="mitte sockel-innen">
+    <p class="wortmarke wortmarke-hell"><span class="wortmarke-die">Die</span><span class="wortmarke-wort">Friseure</span></p>
+    <p>Haidhausen · Wörthstraße 40 · <a href="tel:+498952033549">089 52 03 35 49</a><br>Ismaning · Bahnhofplatz 5 · <a href="tel:+498924590673">089 24 59 06 73</a></p>
+    <p class="sockel-recht">© 2026 Die Friseure · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+  </div>
+</footer>
+
+<script src="seite.js" defer></script>
+</body>
+</html>
