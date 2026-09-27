@@ -137,16 +137,22 @@ Liste funktioniert wie vorher. Eine Lampe: Liegt etwas darauf, leuchtet nur
 | Wert | alt 390 | neu 390 | alt 1440 | neu 1440 |
 |---|---|---|---|---|
 | Oberkante erstes Bild | 57 px | 57 px | 108 px | 108 px |
-| Terminknopf unten | 782 px | 782 px | 805 px | **663 px** |
+| Terminknopf unten | 782 px | 790 px | 805 px | **663 px** |
 | Leuchtende Knöpfe im ersten Bildschirm | 1 | 1 | 1 | 1 |
-| Überschrift : Text | 45 : 16 | 45 : 16 | 84 : 20 | 84 : 20 |
-| Wörter im ersten Bildschirm | 66 | 66 | 69 | 85 |
-| Seitenhöhe | 4.426 px | 4.466 px | 4.815 px | **4.749 px** |
+| Überschrift : Text | 45 : 16 | **48 : 16** | 84 : 20 | 84 : 20 |
+| Wörter im ersten Bildschirm | 66 | **63** | 69 | 85 |
+| Seitenhöhe | 4.426 px | 4.461 px | 4.815 px | **4.767 px** |
 
 Die 16 Wörter mehr am Desktop sind keine neuen Wörter im Auftakt: Der
 Auftakt ist 142 px kürzer geworden, deshalb schaut die Überschrift „Wer hier
-schneidet“ mit ihrem Satz unten ins Bild. Die 40 px am Handy sind die
-Adresse, die jetzt sauber zweizeilig bricht.
+schneidet“ mit ihrem Satz unten ins Bild. Am Handy wächst die Seite um
+35 px: Die Adresse bricht jetzt sauber zweizeilig, und die Überschrift
+steht auf der Schrifttreppe (`--t-h1`, 48 px statt 45 px).
+
+Nach `DESIGN.md` gleicht der Detektor gegen das System ab. Fünf
+Schriftgrößen neben der Treppe (Wertungszahl, Preis in der Liste,
+Öffnungsstatus und zwei Handy-Überschriften) liegen jetzt auf Tokens statt
+als Ausnahme im System — Detektor wieder `[]`.
 
 Detektor `[]`, keine Überbreite bei 360/390/768/1024 px, schwächster
 Kontrast weiterhin 6,70 : 1, keine Konsolenfehler. Verhaltenstest des

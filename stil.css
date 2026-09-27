@@ -649,7 +649,7 @@ body:has(#salon-i:checked) .schild-scheibe { transform: rotateY(180deg); }
 /* Stimmen */
 .wertung { margin-top: 1rem; font-size: var(--t-gross); }
 .wertung strong {
-  font-size: 2.5rem;
+  font-size: var(--t-h2);
   font-weight: 820;
   font-stretch: var(--schmal);
   margin-right: 0.2rem;
@@ -839,7 +839,7 @@ body:has(#l-l:checked) .posten [data-l]:not([data-l~="l"]) { display: none; }
   margin-left: auto;
   white-space: nowrap;
   font-weight: 750;
-  font-size: 1.125rem;
+  font-size: var(--t-text);
   font-variant-numeric: tabular-nums;
 }
 .ab { font-weight: 500; font-size: 0.9375rem; color: var(--grau); }
@@ -1129,11 +1129,9 @@ body:has(#l-l:checked) .posten [data-l]:not([data-l~="l"]) { display: none; }
   .auftakt-bild { margin-inline: calc(-1 * var(--rand)); }
   .auftakt-bild img { border-radius: 0; }
   .auftakt-bild figcaption { padding-inline: var(--rand); }
-  .auftakt h1 { font-size: clamp(2.6rem, 11.5vw, 3.4rem); }
   .auftakt-satz { font-size: 1rem; margin-top: 0.7rem; max-width: none; }
   .salon { gap: 0.9rem; margin-top: 0; padding-top: 1.1rem; }
   .salon-angaben .schalter { margin-bottom: 0.35rem; }
-  .salon-heute { font-size: 0.875rem; }
   .schild { --d: 5.75rem; }
   .knopfreihe .knopf-linie { display: none; }
   .knopfreihe .knopf-lampe { min-height: 3rem; }
@@ -1186,7 +1184,6 @@ body:has(#l-l:checked) .posten [data-l]:not([data-l~="l"]) { display: none; }
 @media (max-width: 23.5rem) {
   .schild { --d: 5.5rem; }
   .schalter label { padding-inline: 0.6rem; }
-  .auftakt h1 { font-size: 2.5rem; }
 }
 
 @media (min-width: 40.01rem) and (max-width: 64rem) {

@@ -77,7 +77,7 @@
   }
   function uhr(min) {
     var h = Math.floor(min / 60), m = min % 60;
-    return h + (m ? ":" + String(m).padStart(2, "0") : "") + " Uhr";
+    return h + (m ? ":" + String(m).padStart(2, "0") : "") + "\u00a0Uhr";   /* „9 Uhr“ bricht nicht */
   }
   document.querySelectorAll("[data-zeiten]").forEach(function (el) {
     var plan = zeitenLesen(el.dataset.zeiten);
