@@ -20,6 +20,12 @@ Ausliefern über GitHub Pages, `.github/workflows/deploy-pages.yml` deployt bei
 jedem Push. Nach dem Push die Live-URL abfragen, bis die Änderung wirklich
 drin ist — erst dann als fertig melden.
 
+**In jedem neuen Repo:** Sobald die Seite gebaut und gepusht ist, dem
+Auftraggeber unaufgefordert den Link zur Pages-Einstellung geben —
+`https://github.com/<besitzer>/<repo>/settings/pages`, dort unter „Build and
+deployment“ → „Source“ **GitHub Actions** wählen — und die spätere
+Live-Adresse `https://<besitzer>.github.io/<repo>/` nennen.
+
 Gestaltungswerte gehören als Token in `:root`, nie verstreut. Farben, Abstände,
 Kurven, Muster (als SVG-Daten-URI) — alles an einer Stelle.
 

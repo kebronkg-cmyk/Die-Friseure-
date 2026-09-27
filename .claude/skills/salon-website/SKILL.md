@@ -18,6 +18,12 @@ werden neu aus dessen Laden abgeleitet. Übertragbar auf jeden Salon: den Ordner
    deployt bei jedem Push. Pages einmal von Hand auf „GitHub Actions“
    stellen (mit `GITHUB_TOKEN` geht das nicht). Server lokal:
    `python3 -m http.server 8099`.
+   **Wunsch des Auftraggebers:** In jedem neuen Repo, sobald die Seite
+   gebaut und gepusht ist, in der Antwort unaufgefordert den direkten Link
+   zur Pages-Einstellung nennen —
+   `https://github.com/<besitzer>/<repo>/settings/pages` — mit dem Satz:
+   unter „Build and deployment“ → „Source“ auf **GitHub Actions** stellen.
+   Dazu die spätere Live-Adresse `https://<besitzer>.github.io/<repo>/`.
 2. **Recherche, bevor gestaltet wird.**
    - Buchungsdienst (Planity, Treatwell, …) öffnen: Preise, Dauer, Fotos,
      Bewertungen. Rohdaten als JSON unter `recherche/` ablegen.
