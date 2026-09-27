@@ -33,6 +33,9 @@
   --limette-tief: oklch(72% 0.17 121);  /* gedrückt */
   --papier: oklch(100% 0 0);            /* Etikett, Karte */
 
+  /* Zeichen: Pfeil als Maske, Strich wie die Kreise der Preisliste */
+  --zeichen-pfeil: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M2.5 8h10.5M9 4l4 4-4 4' fill='none' stroke='black' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
   /* Linien und Schatten */
   --linie: color-mix(in oklch, var(--anthrazit) 14%, transparent);
   --linie-stark: color-mix(in oklch, var(--anthrazit) 32%, transparent);
@@ -206,7 +209,21 @@ body:has(#salon-i:checked) [data-nur="h"] { display: none !important; }
   border-bottom: 2px solid var(--limette);
   padding-bottom: 0.1rem;
 }
-.pfeil::after { content: " →"; }
+.pfeil::after {
+  content: "";
+  display: inline-block;
+  width: 0.95em;
+  height: 0.95em;
+  margin-left: 0.3em;
+  vertical-align: -0.12em;
+  background: currentColor;
+  -webkit-mask: var(--zeichen-pfeil) center / contain no-repeat;
+  mask: var(--zeichen-pfeil) center / contain no-repeat;
+  transition: transform 0.35s var(--kurve);
+}
+@media (hover: hover) and (pointer: fine) {
+  .pfeil:hover::after { transform: translateX(0.15em); }
+}
 @media (hover: hover) and (pointer: fine) {
   .pfeil:hover { border-bottom-color: var(--anthrazit); }
 }
@@ -244,7 +261,7 @@ body:has(#salon-i:checked) [data-nur="h"] { display: none !important; }
   position: sticky;
   top: 0;
   z-index: 20;
-  background: color-mix(in oklch, var(--wand) 94%, transparent);
+  background: var(--wand);
   border-bottom: 1px solid var(--linie);
   transition: transform 0.4s var(--kurve);
 }
@@ -590,7 +607,9 @@ body:has(#salon-i:checked) .schild-scheibe { transform: rotateY(180deg); }
 .wohnzimmer-text {
   width: auto;
   margin: 0;
-  padding: 0 var(--rand) 2.5rem clamp(1.5rem, 4vw, 3.5rem);
+  /* Linke Kante = Satzkante der Seite (.mitte), auch wenn das Bild bei
+     1280 px endet und schmaler ist als der Schirm */
+  padding: 0 var(--rand) 2.5rem calc((min(100vw, 1280px) - min(100vw - 2 * var(--rand), var(--breite))) / 2);
 }
 .wohnzimmer-text p {
   margin-top: 0.9rem;
@@ -673,8 +692,8 @@ body:has(#salon-i:checked) .adresse[data-ort="i"] { border-color: var(--anthrazi
 .zeiten div { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px dotted var(--linie-stark); padding-bottom: 0.2rem; }
 .zeiten dt { color: var(--grau); }
 .zeiten dd { margin: 0; font-variant-numeric: tabular-nums; }
-.adresse-weg { margin-top: auto; font-size: 0.9375rem; color: var(--grau); }
-.adresse-links { display: flex; flex-wrap: wrap; gap: 0.6rem 1.5rem; }
+.adresse-weg { font-size: 0.9375rem; color: var(--grau); }
+.adresse-links { margin-top: auto; padding-top: 0.35rem; display: flex; flex-wrap: wrap; gap: 0.6rem 1.5rem; }
 
 /* Sockel: anthrazit mit Eichenkante — die untere Wand des Salons */
 .sockel {
@@ -921,6 +940,7 @@ body:has(#l-l:checked) .posten [data-l]:not([data-l~="l"]) { display: none; }
 .kaertchen.hat-posten .kaertchen-leer, .kaertchen:not(.hat-posten) .kaertchen-voll { display: none; }
 
 .kaertchen-liste { list-style: none; padding: 0; margin: 0.35rem 0 0; }
+.kaertchen { --kp-weg: 1.75rem; }
 .kaertchen-liste li {
   display: flex;
   align-items: baseline;
@@ -936,12 +956,13 @@ body:has(#l-l:checked) .posten [data-l]:not([data-l~="l"]) { display: none; }
 .kp-dauer { display: block; font-size: var(--t-klein); color: var(--grau); }
 .kp-preis { white-space: nowrap; font-weight: 700; font-variant-numeric: tabular-nums; }
 .kp-weg {
+  position: relative;
   flex: none;
-  align-self: center;
+  align-self: flex-start;
   display: grid;
   place-items: center;
-  width: 1.75rem; height: 1.75rem;
-  margin-right: -0.35rem;
+  width: var(--kp-weg); height: var(--kp-weg);
+  margin-block: -0.2rem;
   padding: 0;
   border: 0;
   border-radius: 50%;
@@ -954,7 +975,8 @@ body:has(#l-l:checked) .posten [data-l]:not([data-l~="l"]) { display: none; }
 }
 
 .kaertchen-summe { margin: 0.9rem 0 0; display: grid; gap: 0.15rem; }
-.kaertchen-summe div { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.kp-weg::before { content: ""; position: absolute; inset: -0.5rem; }   /* 2,75 rem zum Tippen */
+.kaertchen-summe div { padding-right: calc(var(--kp-weg) + 0.75rem); display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
 .kaertchen-summe dt { color: var(--grau); font-size: 0.9375rem; }
 .kaertchen-summe dd { margin: 0; font-variant-numeric: tabular-nums; }
 .summe-preis { font-size: 1.75rem; font-weight: 800; font-stretch: var(--schmal); line-height: 1.1; }
@@ -982,7 +1004,7 @@ body:has(#l-l:checked) .posten [data-l]:not([data-l~="l"]) { display: none; }
 .kaertchen-kopie { background: var(--papier); font: inherit; font-weight: 650; cursor: pointer; }
 .kaertchen-meldung { min-height: 1.3em; margin-top: 0.5rem; font-size: var(--t-klein); font-weight: 600; }
 .kaertchen-klein { font-size: var(--t-klein); color: var(--grau); line-height: 1.5; }
-.kaertchen-klein a { font-variant-numeric: tabular-nums; }
+.kaertchen-klein a { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .kaertchen-leeren {
   margin-top: 0.6rem;
   padding: 0.35rem 0;

@@ -302,7 +302,7 @@
         li.querySelector(".kp-name").textContent = x.name;
         var d = document.createElement("span");
         d.className = "kp-dauer";
-        d.textContent = x.gruppe + (x.dauer ? " · " + dauerText(x.dauer) : "");
+        d.textContent = x.gruppe + (x.dauer ? " · " + x.dauer + " Min." : "");   /* wie in der Liste */
         li.querySelector(".kp-name").appendChild(d);
         li.querySelector(".kp-preis").textContent = x.preisText;
         var weg = li.querySelector(".kp-weg");
