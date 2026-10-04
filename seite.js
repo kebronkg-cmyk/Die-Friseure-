@@ -64,7 +64,7 @@
     return { tag: tag, minute: parseInt(w.hour, 10) % 24 * 60 + parseInt(w.minute, 10) };
   }
   function zeitenLesen(text) {
-    // „1 09:00-18:45;2 09:00-18:30;3-5 09:00-18:45“ → je Wochentag [von, bis]
+    // „1 09:00-18:30;3-5 09:00-18:30;6 09:00-17:00“ → je Wochentag [von, bis]
     var plan = {};
     text.split(";").forEach(function (block) {
       var m = block.trim().match(/^(\d)(?:-(\d))?\s+(\d\d):(\d\d)-(\d\d):(\d\d)$/);
@@ -176,9 +176,9 @@
     /* Wer in welchem Salon schneidet — wie auf der Startseite */
     var SALONS = {
       haidhausen: { name: "Haidhausen", mail: "info@die-friseure-haidhausen.de",
-        team: ["Ali", "Ali Raza", "Wissam", "Juna", "Sara", "Zahed"] },
+        team: ["Ali", "Wissam", "Juna", "Zahed"] },
       ismaning: { name: "Ismaning", mail: "info@die-friseure-ismaning.de",
-        team: ["Ali", "Ania", "Kimi"] }
+        team: ["Ali", "Ania", "Kimi", "Jasmin"] }
     };
     var LAENGE = { k: "kurze Haare", m: "mittellange Haare", l: "lange Haare" };
 
