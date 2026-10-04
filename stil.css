@@ -515,6 +515,7 @@ body:has(#salon-i:checked) .schild-scheibe { transform: rotateY(180deg); }
 .gesicht {
   width: 11.5rem;           /* 369 px Vorlage: auch bei doppelter Dichte nicht gezogen */
   display: grid;
+  align-content: start;
   gap: 0.1rem;
 }
 .gesicht img {
@@ -522,6 +523,30 @@ body:has(#salon-i:checked) .schild-scheibe { transform: rotateY(180deg); }
   border-radius: var(--ecke);
   margin-bottom: 0.55rem;
   background: var(--wand-tief);
+}
+/* Noch ohne Porträt: die Scheibe des Nasenschilds mit der Initiale —
+   gleiche Fläche wie ein Foto, damit die Reihe ruhig bleibt. */
+.gesicht-scheibe {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 369 / 277;
+  margin-bottom: 0.55rem;
+  border-radius: var(--ecke);
+  background: var(--wand-tief);
+}
+.gesicht-scheibe span {
+  display: grid;
+  place-items: center;
+  width: 42%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--sockel);
+  border: 2px solid var(--metall);
+  color: var(--limette);
+  font-size: 1.75rem;
+  font-weight: 860;
+  font-stretch: 62%;
+  line-height: 1;
 }
 .gesicht-name { font-weight: 700; font-size: 1.0625rem; }
 .gesicht-rolle { font-size: 0.9375rem; color: var(--grau); }

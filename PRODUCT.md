@@ -48,16 +48,17 @@ beiden Salons.
 | Anschrift | Wörthstraße 40, 81667 München | Bahnhofplatz 5, 85737 Ismaning |
 | Telefon | 089 52 03 35 49 | 089 24 59 06 73 |
 | E-Mail | info@die-friseure-haidhausen.de | info@die-friseure-ismaning.de |
-| Mo | 09:00–19:30 | 09:00–18:45 |
-| Di | 09:00–19:30 | 09:00–18:30 |
-| Mi–Fr | 09:00–19:30 | 09:00–18:45 |
+| Mo | 09:00–19:30 | 09:00–18:30 |
+| Di | 09:00–19:30 | geschlossen |
+| Mi–Fr | 09:00–19:30 | 09:00–18:30 |
 | Sa | 09:00–19:30 | 09:00–17:00 |
 | So | geschlossen | geschlossen |
 | Buchung | treatwell.de/ort/die-friseure-aus-haidhausen/ | treatwell.de/ort/die-friseure-aus-ismaning/ |
 | Anfahrt | Ostbahnhof | S8 Ismaning, Bus 230/231/531 |
 
-Zeiten laut Treatwell. Die alte Website von Ismaning nennt Dienstag als
-Ruhetag und 18:30 statt 18:45 — offen in `ABNAHME.md`.
+Zeiten Haidhausen laut Treatwell. Ismaning vom Inhaber bestätigt (Abnahme,
+September 2026): Dienstag Ruhetag, sonst bis 18:30. Treatwell zeigt dort noch
+18:45 und Dienstag offen — das sollte der Salon bei Treatwell nachziehen.
 
 ## Brand Commitments
 
