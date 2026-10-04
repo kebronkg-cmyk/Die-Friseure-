@@ -32,7 +32,6 @@ jobs:
           mkdir _site
           cp index.html preise.html impressum.html datenschutz.html stil.css seite.js _site/
           cp -r bilder schrift _site/
-          if [ -d fassung-2 ]; then cp -r fassung-2 _site/; fi
           if [ -f CNAME ]; then cp CNAME _site/; fi
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3

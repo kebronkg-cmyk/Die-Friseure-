@@ -197,7 +197,7 @@ body:has(#salon-i:checked) [data-nur="h"] { display: none !important; }
   border: 1px solid var(--linie-stark);
   color: var(--anthrazit);
 }
-.knopf:active { transform: translateY(1px); }
+
 @media (hover: hover) and (pointer: fine) {
   .knopf-lampe:hover { background: var(--limette-tief); }
   .knopf-linie:hover { border-color: var(--anthrazit); }
@@ -1215,6 +1215,99 @@ body:has(#l-l:checked) .posten [data-l]:not([data-l~="l"]) { display: none; }
   .auftakt-bild { max-width: 1000px; }
   .etiketten { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .stimmen { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+
+/* ============================================================
+   Fassung 2 — Feinschliff (impeccable + emil-design-eng)
+   ============================================================ */
+
+/* Satz: keine einsamen Wörter am Absatzende */
+p, li, dd { text-wrap: pretty; }
+
+/* Knöpfe hören zu: beim Drücken leicht kleiner statt 1 px tiefer */
+.knopf:active, .etikett a:active, .galerie-kachel:active { transform: scale(0.97); }
+.galerie-kachel { transition: transform 0.3s var(--kurve); }
+
+/* Stimmen: deutsche Anführungszeichen, das öffnende hängt in den Rand */
+.stimmen blockquote p::before { content: "„"; margin-left: -0.42em; }
+.stimmen blockquote p::after { content: "“"; }
+
+/* Erster Bildschirm: ein gesetzter Auftritt in zwei Gruppen —
+   erst Team und Satz, dann das Schild-Band. Höchstens zwei Bewegungen
+   gleichzeitig; was steht, steht auch ohne Bewegung. */
+@media (prefers-reduced-motion: no-preference) {
+  .auftakt-bild { animation: auftakt-da 0.55s var(--kurve) backwards; }
+  .auftakt-text { animation: auftakt-hoch 0.55s var(--kurve) 0.06s backwards; }
+  .auftakt .salon { animation: auftakt-hoch 0.6s var(--kurve) 0.5s backwards; }
+}
+@keyframes auftakt-da { from { opacity: 0; } }
+@keyframes auftakt-hoch { from { opacity: 0; transform: translateY(0.75rem); } }
+
+/* Preisgruppen: der Inhalt blendet beim Aufklappen ein */
+@media (prefers-reduced-motion: no-preference) {
+  .gruppe[open] .posten-liste,
+  .gruppe[open] .gruppe-weg { animation: gruppe-auf 0.4s var(--kurve) backwards; }
+  .gruppe[open] .gruppe-weg { animation-delay: 0.06s; }
+}
+@keyframes gruppe-auf { from { opacity: 0; transform: translateY(-0.35rem); } }
+
+/* Terminkärtchen: der Punkt, der von der Zeile zum Kärtchen fliegt */
+.kaertchen-flug {
+  position: fixed;
+  left: 0; top: 0;
+  z-index: 40;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: -0.375rem 0 0 -0.375rem;
+  border-radius: 50%;
+  background: var(--limette);
+  border: 1px solid var(--anthrazit);
+  pointer-events: none;
+}
+.empfangen { animation: empfangen 0.5s var(--kurve); }
+@keyframes empfangen { from { opacity: 0.35; } }
+/* Galerie: aus der Kachel heraus (Ursprung setzt das Skript) */
+@keyframes auf { from { opacity: 0; transform: scale(0.92); } }
+
+/* Kapitelanzeige in der Leiste — nur am Handy */
+.leiste-kapitel { display: none; }
+
+@media (max-width: 40rem) {
+  /* Kapitel mit Nummer und Lichtfuge */
+  .kapitel { position: relative; }
+  .kapitel::before {
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 0 var(--rand) 2rem;
+    background: linear-gradient(90deg,
+      color-mix(in oklch, var(--limette) 0%, transparent),
+      var(--limette) 18%,
+      color-mix(in oklch, var(--limette) 0%, transparent) 72%);
+  }
+  .kapitel-salon::before { margin-bottom: 1.25rem; }
+  h2[data-nr]::before {
+    content: attr(data-nr);
+    margin-right: 0.55rem;
+    font-size: var(--t-klein);
+    font-weight: 650;
+    font-stretch: var(--breit);
+    letter-spacing: 0.04em;
+    font-variant-numeric: tabular-nums;
+    color: var(--grau);
+    vertical-align: 0.5em;
+  }
+
+  /* In der Leiste: wo man gerade ist, statt der Nummer, die schon oben stand */
+  .im-kapitel .leiste-tel { display: none; }
+  .im-kapitel .leiste-kapitel {
+    display: block;
+    margin-left: auto;
+    font-size: 0.9375rem;
+    font-weight: 650;
+    white-space: nowrap;
+  }
+  .leiste-kapitel b { margin-right: 0.35rem; font-weight: 600; color: var(--grau); font-variant-numeric: tabular-nums; }
 }
 
 @media (prefers-reduced-motion: reduce) {
