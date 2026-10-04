@@ -254,11 +254,6 @@ body:has(#salon-i:checked) [data-nur="h"] { display: none !important; }
 }
 .wortmarke-hell .wortmarke-wort { color: var(--limette); }
 
-/* Logo: das echte Zeichen des Hauses (Schwung mit Profil) in der Leiste */
-.logo { display: block; flex: none; line-height: 0; }
-.logo img { height: 3.1rem; width: auto; }
-@media (max-width: 52rem) { .logo img { height: 2.35rem; } }
-
 /* ------------------------------------------------------------
    Leiste: weicht beim Runterscrollen aus
    ------------------------------------------------------------ */
