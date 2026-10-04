@@ -15,6 +15,10 @@ steht so, wie es die aktuellste Quelle (Treatwell) sagt.
 - **Team:** Ali Raza und Sara sind raus. Jasmin (Nägel, Ismaning) ist drin,
   vorerst mit Initiale statt Foto.
 
+- **Impressum und Datenschutz:** fertig geschrieben (Stand Oktober 2026),
+  Anschriften von STRATO, Handwerkskammer und Aufsichtsbehörde an den
+  Originalquellen geprüft. Offen nur noch Punkt 5 unten.
+
 ## Noch offen
 
 1. **Öffnungszeiten Ismaning.** Treatwell: Mo 9–18:45, Di 9–18:30,
@@ -32,10 +36,13 @@ steht so, wie es die aktuellste Quelle (Treatwell) sagt.
 4. **Bildrechte.** Raumfotos stammen aus den Treatwell-Profilen, Porträts
    und Teamfoto von der alten Website. Liegen die Rechte beim Salon
    (Fotograf, Nutzung auf der eigenen Seite)?
-5. **Impressum.** Fehlt noch: Rechtsform, ggf. USt-IdNr., zuständige
-   Handwerkskammer (Friseur ist zulassungspflichtiges Handwerk) und
-   Eintragung in die Handwerksrolle. Der Satz zur
-   Verbraucherschlichtung ist ein Vorschlag — bitte bestätigen.
+5. **Impressum — zwei Angaben, die nur er hat.** Rechtsform (Einzelunternehmer,
+   wie auf der alten Seite), Kammer (Handwerkskammer für München und
+   Oberbayern) und Handwerksordnung stehen drin. Bitte bestätigen:
+   (a) Gibt es eine **USt-IdNr.**? Dann gehört sie ins Impressum; eine
+   Steuernummer nicht. (b) Stimmt der Satz zur **Verbraucherschlichtung**
+   („nicht bereit“)? Mit mehr als zehn Beschäftigten muss dort eine
+   Aussage stehen. Optional: Handwerksrollen-Nummer und Meistertitel.
 6. **Haarlänge.** Treatwell nennt in Ismaning „kurz / lang / extra lang“,
    in Haidhausen teils „kurz / mittel / Extra lang“. Auf der Seite
    einheitlich „kurz / mittel / lang“ nach der Reihenfolge. Passt das so,
