@@ -19,6 +19,10 @@
       if (e.target.name === name) speicher.schreiben(schluessel, e.target.value);
     });
   }
+  var ruhig = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var KURVE = "cubic-bezier(0.22, 1, 0.36, 1)";      /* wie --kurve: Auftritt bremst aus */
+  var KURVE_AB = "cubic-bezier(0.55, 0, 1, 0.45)";   /* wie --kurve-ab: Abgang beschleunigt */
+
   var adresse = new URLSearchParams(location.search);
   merken("salon", "df-salon", adresse.get("salon"));
   merken("laenge", "df-laenge", null);
@@ -50,6 +54,30 @@
     new IntersectionObserver(function (e) {
       document.body.classList.toggle("auftakt-weg", !e[0].isIntersecting);
     }).observe(auftaktKnopf);
+  }
+
+  /* --- Handy: In der Leiste steht, in welchem Kapitel man gerade ist --- */
+  var kapitelAnzeige = document.querySelector(".leiste-kapitel");
+  if (kapitelAnzeige && "IntersectionObserver" in window) {
+    var aktiv = null;
+    var titel = Array.prototype.slice.call(document.querySelectorAll("h2[data-nr]"));
+    var beobachter = new IntersectionObserver(function () {
+      /* Das Kapitel, dessen Abschnitt gerade die Bildmitte kreuzt */
+      var mitte = innerHeight * 0.45, gefunden = null;
+      titel.forEach(function (h) {
+        var r = h.closest("section").getBoundingClientRect();
+        if (r.top <= mitte && r.bottom > mitte) gefunden = h;
+      });
+      if (gefunden === aktiv) return;
+      aktiv = gefunden;
+      document.body.classList.toggle("im-kapitel", !!gefunden);
+      if (!gefunden) return;
+      kapitelAnzeige.innerHTML = "<b></b>";
+      kapitelAnzeige.firstChild.textContent = gefunden.dataset.nr;
+      kapitelAnzeige.appendChild(document.createTextNode(gefunden.dataset.kurz));
+      if (!ruhig && kapitelAnzeige.animate) kapitelAnzeige.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 300, easing: KURVE });
+    }, { threshold: [0, 0.25, 0.5, 0.75, 1], rootMargin: "-45% 0px -54% 0px" });
+    titel.forEach(function (h) { beobachter.observe(h.closest("section")); });
   }
 
   /* --- Heute geöffnet? Uhrzeit in München, nicht die des Geräts --- */
@@ -144,16 +172,31 @@
         ausloeser = k;
         zeigen(reihe.indexOf(k));
         ansicht.showModal();
+        /* Die Ansicht wächst aus der angetippten Kachel, nicht aus der Mitte */
+        var q = k.getBoundingClientRect(), r = ansicht.getBoundingClientRect();
+        ansicht.style.transformOrigin = (q.left + q.width / 2 - r.left) + "px " + (q.top + q.height / 2 - r.top) + "px";
       });
     });
-    ansicht.querySelector(".ansicht-zu").addEventListener("click", function () { ansicht.close(); });
-    ansicht.querySelector(".ansicht-zurueck").addEventListener("click", function () { zeigen(stelle - 1); });
-    ansicht.querySelector(".ansicht-weiter").addEventListener("click", function () { zeigen(stelle + 1); });
+    /* Abgang schneller als Auftritt (0,3 s statt 0,4 s), dann erst schließen */
+    var schliessen = function () {
+      if (ruhig || !ansicht.animate) { ansicht.close(); return; }
+      ansicht.animate([{ opacity: 1, transform: "none" }, { opacity: 0, transform: "scale(0.96)" }],
+        { duration: 300, easing: KURVE_AB }).onfinish = function () { ansicht.close(); };
+    };
+    var blaettern = function (d) {
+      zeigen(stelle + d);
+      if (!ruhig && bild.animate) bild.animate([{ opacity: 0.35 }, { opacity: 1 }], { duration: 300, easing: KURVE });
+    };
+    ansicht.addEventListener("cancel", function (e) { e.preventDefault(); schliessen(); });
+    ansicht.querySelector(".ansicht-zu").addEventListener("click", schliessen);
+    /* Per Klick weich, per Pfeiltaste sofort — Tastatur wird nie animiert */
+    ansicht.querySelector(".ansicht-zurueck").addEventListener("click", function () { blaettern(-1); });
+    ansicht.querySelector(".ansicht-weiter").addEventListener("click", function () { blaettern(1); });
     ansicht.addEventListener("keydown", function (e) {
       if (e.key === "ArrowLeft") zeigen(stelle - 1);
       if (e.key === "ArrowRight") zeigen(stelle + 1);
     });
-    ansicht.addEventListener("click", function (e) { if (e.target === ansicht) ansicht.close(); });
+    ansicht.addEventListener("click", function (e) { if (e.target === ansicht) schliessen(); });
     ansicht.addEventListener("close", function () { if (ausloeser) ausloeser.focus({ preventScroll: true }); });
   }
   /* --- Terminkärtchen: Leistungen antippen, nach Ablauf gesammelt, daraus
@@ -223,9 +266,44 @@
         if (i < 0) { gewaehlt.push(z.dataset.wahl); neu = z.dataset.wahl; } else gewaehlt.splice(i, 1);
         speicher.schreiben("df-kaertchen", JSON.stringify(gewaehlt));
         zeichnen();
+        if (i < 0) fliegen(k.querySelector(".posten-kreis"));
       });
     });
     var neu = null;
+
+    /* Ein Punkt fliegt vom Kreis der Zeile dorthin, wo die Auswahl landet:
+       am breiten Schirm ins Kärtchen, sonst in den Sockel unten. Die Dauer
+       folgt der Strecke, nicht einer festen Zahl. */
+    var fliegen = function (von) {
+      if (ruhig || !document.body.animate) return;
+      var aufKarte = platz.offsetParent !== null;
+      var ziel = aufKarte ? (liste.querySelector(".neu") || liste.lastElementChild) : sockelLeiste.querySelector(".kl-zahl");
+      var empf = aufKarte ? summePreis : sockelLeiste.querySelector(".kl-zahl");
+      if (!ziel) return;
+      var a = von.getBoundingClientRect(), b = ziel.getBoundingClientRect();
+      var x0 = a.left + a.width / 2, y0 = a.top + a.height / 2;
+      /* Liegt das Ziel im Kärtchen außerhalb des Bildes, fliegt nichts */
+      if (aufKarte && (b.bottom > innerHeight || b.top < 0)) return;
+      var x1 = b.left + 6;
+      var y1 = aufKarte ? b.top + Math.min(b.height / 2, 14) : innerHeight - 40;
+      var weg = Math.hypot(x1 - x0, y1 - y0);
+      var dauer = Math.max(450, Math.min(800, weg * 0.6));
+      var punkt = document.createElement("span");
+      punkt.className = "kaertchen-flug";
+      punkt.setAttribute("aria-hidden", "true");
+      document.body.appendChild(punkt);
+      /* Bewegung bremst aus; die Deckkraft läuft gleichmäßig und bleibt bis
+         kurz vor der Landung voll — sonst verzerrt die Kurve auch sie. */
+      punkt.animate([
+        { transform: "translate(" + x0 + "px," + y0 + "px) scale(1)" },
+        { transform: "translate(" + x1 + "px," + y1 + "px) scale(0.6)" }
+      ], { duration: dauer, easing: KURVE });
+      punkt.animate([{ opacity: 1 }, { opacity: 1, offset: 0.8 }, { opacity: 0 }],
+        { duration: dauer, easing: "linear", fill: "forwards" }).onfinish = function () {
+        punkt.remove();
+        if (empf) { empf.classList.remove("empfangen"); void empf.offsetWidth; empf.classList.add("empfangen"); }
+      };
+    };
 
     /* Was gerade sichtbar gewählt ist, in der Reihenfolge der Liste (= Ablauf) */
     var aktuell = function () {
@@ -271,7 +349,7 @@
       var s = salonJetzt();
       var zeilen = ["Guten Tag,", "", "ich hätte gern einen Termin in " + s.name + ":"];
       p.forEach(function (x) {
-        zeilen.push("– " + (x.herren ? "Herren: " : "") + x.name + (x.laenge ? " (" + LAENGE[wert("laenge")] + ")" : "") + ", " + x.preisText.replace(/ /g, " "));
+        zeilen.push("• " + (x.herren ? "Herren: " : "") + x.name + (x.laenge ? " (" + LAENGE[wert("laenge")] + ")" : "") + ", " + x.preisText.replace(/ /g, " "));
       });
       var summe = p.reduce(function (a, x) { return a + x.preis; }, 0);
       var dauer = p.reduce(function (a, x) { return a + x.dauer; }, 0);
@@ -349,7 +427,7 @@
     kopie.addEventListener("click", function () {
       var t = text(aktuell());
       var fertig = function (ok) {
-        meldung.textContent = ok ? "Kopiert — jetzt in E-Mail oder Nachricht einfügen." : "Kopieren ging nicht. Bitte per E-Mail schicken.";
+        meldung.textContent = ok ? "Kopiert. Jetzt in E-Mail oder Nachricht einfügen." : "Kopieren ging nicht. Bitte per E-Mail schicken.";
         clearTimeout(kopie._uhr);
         kopie._uhr = setTimeout(function () { meldung.textContent = ""; }, 4000);
       };

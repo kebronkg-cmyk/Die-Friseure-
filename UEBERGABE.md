@@ -166,6 +166,21 @@ teilweise — danach mit Strebe und kräftigeren Strichen neu gezeichnet.
 Prüfaufnahmen der Preisseite nicht mehr als Kacheln (klebende Elemente
 erscheinen dort doppelt), sondern mit Viewport auf `scrollHeight`.
 
+## Dritte Runde (Oktober 2026): Fassung 2 ist die Hauptseite
+
+Feinschliff mit impeccable und emil-design-eng, als `/fassung-2/` neben
+Fassung 1 verglichen und vom Auftraggeber freigegeben. Fassung 1 bleibt in
+Git wiederherstellbar (Commit `b2e6f04`).
+
+- Handy: Kapitel mit Nummer und Lichtfuge, aktuelles Kapitel in der Leiste
+- Erster Bildschirm: ein Auftritt in zwei Gruppen
+- Terminkärtchen: Punkt fliegt von der Zeile zum Kärtchen bzw. Sockel
+  (Dauer aus der Strecke; Bewegung ease-out, Deckkraft linear)
+- Galerie öffnet aus der Kachel, schließt schneller; Pfeiltasten sofort
+- Knöpfe `scale(0.97)`, Preisgruppen blenden ein, hängende Anführungszeichen
+- **Keine Gedankenstriche in sichtbaren Texten** (Wunsch des Auftraggebers),
+  auch nicht in der Terminwunsch-E-Mail; Bis-Striche (Mo–Sa, 9–19:30) bleiben
+
 ## Nächste Schritte
 
 1. Pages einmal auf „GitHub Actions“ stellen, dann nach dem Merge die
