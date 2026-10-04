@@ -60,7 +60,7 @@ steht so, wie es die aktuellste Quelle (Treatwell) sagt.
     fertiger Terminwunsch-Text wie auf anderen Salonseiten dazukommen.
 12. **Adresse der Seite.** Unter welcher Domain soll die neue Seite laufen
     (eine gemeinsame oder beide alten weiterleiten)?
-13. **Logo.** Das Logo (Schwung mit Gesichtsprofil) liegt nur als kleines
+13. **Logo.** *Stand Oktober 2026: Das Logo „Die Friseure & Beauty“ ist aus einem Bildschirmfoto der Datei in FileGator (Ordner „Corporate Identity“) ausgeschnitten und steht oben in der Leiste. Für volle Schärfe die Originaldatei (.svg/.ai/.pdf oder große .png) nachreichen.* Das Logo (Schwung mit Gesichtsprofil) liegt nur als kleines
     PNG vor. Die Seite setzt die Wortmarke wie das Nasenschild in Schrift.
     Liegt das Logo als Vektor vor?
 14. **Terminwunsch per E-Mail.** Das Terminkärtchen auf der Preisseite

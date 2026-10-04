@@ -1,0 +1,4 @@
+# Die Friseure Ismaning: dauerhaft auf die gemeinsame Seite umgezogen.
+# Jede Adresse dieser Domain führt auf die neue Seite, Ismaning ausgewählt.
+RewriteEngine On
+RewriteRule ^ https://die-friseure-haidhausen.de/?salon=ismaning [R=301,L]
