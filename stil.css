@@ -259,28 +259,6 @@ body:has(#salon-i:checked) [data-nur="h"] { display: none !important; }
 .logo img { height: 3.1rem; width: auto; }
 @media (max-width: 52rem) { .logo img { height: 2.35rem; } }
 
-/* Fuß: „bevorzugte Quelle“ bei Google als schlichter Link, ohne fremdes Skript */
-.quelle-knopf {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.45rem 0.9rem;
-  border: 1px solid color-mix(in oklch, var(--wand) 35%, transparent);
-  border-radius: 999px;
-  font-size: var(--t-klein);
-  font-weight: 600;
-  text-decoration: none;
-  transition: border-color var(--dauer) var(--kurve), transform 0.3s var(--kurve);
-}
-.quelle-knopf::before {
-  content: "";
-  width: 0.5rem; height: 0.5rem;
-  border-radius: 50%;
-  background: var(--limette);
-}
-.quelle-knopf:active { transform: scale(0.97); }
-@media (hover: hover) and (pointer: fine) { .quelle-knopf:hover { border-color: var(--limette); } }
-
 /* ------------------------------------------------------------
    Leiste: weicht beim Runterscrollen aus
    ------------------------------------------------------------ */
