@@ -36,7 +36,7 @@ jobs:
         if: env.BENUTZER != '' && env.PASSWORT != ''
         run: |
           mkdir _site
-          cp index.html preise.html impressum.html datenschutz.html stil.css seite.js _site/
+          cp index.html preise.html impressum.html datenschutz.html stil.css seite.js .htaccess _site/
           cp -r bilder schrift _site/
       - name: Per SFTP nach /haidhausen
         if: env.BENUTZER != '' && env.PASSWORT != ''
