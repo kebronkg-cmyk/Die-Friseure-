@@ -875,7 +875,7 @@ body:has(#l-l:checked) .posten [data-l]:not([data-l~="l"]) { display: none; }
 /* ------------------------------------------------------------
    Terminkärtchen: wie das Papierkärtchen an der Kasse. Leistungen
    antippen, sie landen nach Ablauf sortiert auf dem Kärtchen; daraus wird
-   ein fertiger Terminwunsch für E-Mail, Telefon oder zum Kopieren.
+   ein fertiger Terminwunsch für WhatsApp, Telefon oder zum Kopieren.
    Ohne Skript bleibt alles verborgen — die Liste steht trotzdem.
    ------------------------------------------------------------ */
 .posten[data-wahl] { position: relative; padding-right: 2.75rem; }

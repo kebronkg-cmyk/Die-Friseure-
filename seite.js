@@ -210,7 +210,7 @@
     var laengeText = kaertchen.querySelector(".kaertchen-laenge");
     var bei = kaertchen.querySelector(".feld-bei");
     var wann = kaertchen.querySelector(".feld-wann");
-    var mail = kaertchen.querySelector(".kaertchen-mail");
+    var senden = kaertchen.querySelector(".kaertchen-senden");
     var kopie = kaertchen.querySelector(".kaertchen-kopie");
     var meldung = kaertchen.querySelector(".kaertchen-meldung");
     var sockelLeiste = document.querySelector(".kaertchen-leiste");
@@ -218,11 +218,13 @@
 
     /* Wer in welchem Salon schneidet — wie auf der Startseite */
     var SALONS = {
-      haidhausen: { name: "Haidhausen", mail: "info@die-friseure-haidhausen.de",
+      haidhausen: { name: "Haidhausen",
         team: ["Ali", "Wissam", "Juna", "Zahed"] },
-      ismaning: { name: "Ismaning", mail: "info@die-friseure-ismaning.de",
+      ismaning: { name: "Ismaning",
         team: ["Ali", "Ania", "Kimi", "Jasmin"] }
     };
+    /* Terminwünsche gehen für beide Salons per WhatsApp an diese Nummer */
+    var WHATSAPP = "4917682304558";
     var LAENGE = { k: "kurze Haare", m: "mittellange Haare", l: "lange Haare" };
 
     var gewaehlt = [];
@@ -403,8 +405,7 @@
       summeDauer.textContent = dauerText(dauer);
 
       if (hat) {
-        var s = salonJetzt();
-        mail.href = "mailto:" + s.mail + "?subject=" + encodeURIComponent("Terminwunsch " + s.name) + "&body=" + encodeURIComponent(text(p));
+        senden.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(text(p));
       }
       if (sockelLeiste) {
         sockelLeiste.querySelector(".kl-zahl").textContent = p.length + (p.length === 1 ? " Leistung" : " Leistungen") + " gesammelt";
@@ -427,7 +428,7 @@
     kopie.addEventListener("click", function () {
       var t = text(aktuell());
       var fertig = function (ok) {
-        meldung.textContent = ok ? "Kopiert. Jetzt in E-Mail oder Nachricht einfügen." : "Kopieren ging nicht. Bitte per E-Mail schicken.";
+        meldung.textContent = ok ? "Kopiert. Jetzt in eine Nachricht einfügen." : "Kopieren ging nicht. Bitte per WhatsApp schicken.";
         clearTimeout(kopie._uhr);
         kopie._uhr = setTimeout(function () { meldung.textContent = ""; }, 4000);
       };
