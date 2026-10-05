@@ -1,4 +1,4 @@
-name: Website auf GitHub Pages ausliefern
+name: GitHub Pages auf die echte Adresse umleiten
 
 on:
   push:
@@ -25,14 +25,26 @@ jobs:
       - uses: actions/configure-pages@v5
         with:
           enablement: true
-      # Nur die Website ausliefern — Notizen, Recherche und Werkzeuge
-      # (ABNAHME.md, CLAUDE.md, recherche/, .claude/ …) bleiben im Repo.
-      - name: Website zusammenstellen
+      # Die Website liegt bei STRATO (siehe strato.yml). Die Kopie hier
+      # leitet nur noch weiter, damit alte Links ankommen und Google keine
+      # zweite Fassung findet.
+      - name: Weiterleitungen bauen
         run: |
           mkdir _site
-          cp index.html preise.html impressum.html datenschutz.html stil.css seite.js _site/
-          cp -r bilder schrift _site/
-          if [ -f CNAME ]; then cp CNAME _site/; fi
+          for seite in index preise impressum datenschutz; do
+            ziel="https://die-friseure-haidhausen.de/$seite.html"
+            if [ "$seite" = index ]; then ziel="https://die-friseure-haidhausen.de/"; fi
+            printf '%s\n' \
+              '<!doctype html>' \
+              '<html lang="de"><head><meta charset="utf-8">' \
+              '<title>Die Friseure</title>' \
+              '<meta name="robots" content="noindex">' \
+              "<link rel=\"canonical\" href=\"$ziel\">" \
+              "<meta http-equiv=\"refresh\" content=\"0; url=$ziel\">" \
+              "<script>location.replace(\"$ziel\" + location.search + location.hash);</script>" \
+              "</head><body><p><a href=\"$ziel\">Weiter zu Die Friseure</a></p></body></html>" \
+              > "_site/$seite.html"
+          done
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:

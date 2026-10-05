@@ -1,0 +1,57 @@
+name: Website auf STRATO hochladen
+
+# Jede Änderung auf main landet automatisch in /haidhausen auf dem
+# STRATO-Webspace (die-friseure-haidhausen.de). Zugangsdaten stehen nur als
+# Geheimnisse in den Repo-Einstellungen, nie im Code:
+#   STRATO_BENUTZER  – SFTP-Benutzername (wie in WinSCP)
+#   STRATO_PASSWORT  – SFTP-Passwort
+# Fehlen sie, wird der Schritt übersprungen. Es wird nur hochgeladen und
+# überschrieben, nie etwas auf dem Server gelöscht.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: strato
+  cancel-in-progress: false
+
+jobs:
+  hochladen:
+    runs-on: ubuntu-latest
+    env:
+      BENUTZER: ${{ secrets.STRATO_BENUTZER }}
+      PASSWORT: ${{ secrets.STRATO_PASSWORT }}
+    steps:
+      - name: Zugang vorhanden?
+        if: env.BENUTZER == '' || env.PASSWORT == ''
+        run: echo "::notice::STRATO-Zugang fehlt in den Repo-Geheimnissen, nichts hochgeladen."
+      - uses: actions/checkout@v4
+        if: env.BENUTZER != '' && env.PASSWORT != ''
+      - name: Website zusammenstellen
+        if: env.BENUTZER != '' && env.PASSWORT != ''
+        run: |
+          mkdir _site
+          cp index.html preise.html impressum.html datenschutz.html stil.css seite.js _site/
+          cp -r bilder schrift _site/
+      - name: Per SFTP nach /haidhausen
+        if: env.BENUTZER != '' && env.PASSWORT != ''
+        run: |
+          sudo apt-get install -y -qq lftp > /dev/null
+          # Passwort über die Umgebung, damit Sonderzeichen nichts zerlegen
+          export LFTP_PASSWORD="$PASSWORT"
+          lftp --env-password -u "$BENUTZER" -e "set sftp:auto-confirm yes; \
+            set net:max-retries 3; \
+            mirror --reverse --parallel=4 --verbose _site /haidhausen; bye" \
+            sftp://ssh.strato.de
+      - name: Live prüfen
+        if: env.BENUTZER != '' && env.PASSWORT != ''
+        run: |
+          for datei in index.html stil.css seite.js; do
+            curl -fsS "https://die-friseure-haidhausen.de/$datei" -o live
+            cmp live "_site/$datei" && echo "$datei ist live"
+          done

@@ -183,8 +183,13 @@ Git wiederherstellbar (Commit `b2e6f04`).
 
 ## Nächste Schritte
 
-1. Pages einmal auf „GitHub Actions“ stellen, dann nach dem Merge die
-   Live-URL prüfen.
+1. Hosting: STRATO-Webspace, Ordner `/haidhausen` (alte Seite in
+   `/haidhausen-alt`). `die-friseure-ismaning.de` leitet aus `/ismaning`
+   per 301 auf `/?salon=ismaning` (Dateien in `werkzeuge/ismaning-weiterleitung/`,
+   alte Seite in `/ismaning-alt`). Upload automatisch über
+   `.github/workflows/strato.yml`, sobald die Repo-Geheimnisse
+   `STRATO_BENUTZER` und `STRATO_PASSWORT` gesetzt sind; es wird nur
+   hochgeladen, nie gelöscht. Nach dem Merge die Live-URL prüfen.
 2. Antworten aus `ABNAHME.md` einarbeiten, vor allem Team und Zeiten —
    das Team steht auch in `seite.js` (Wunschperson im Kärtchen).
 3. Detektor: `npm install` in `.claude/skills/impeccable/` (die
