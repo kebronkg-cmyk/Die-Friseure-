@@ -13,3 +13,15 @@ RewriteRule ^ https://die-friseure-haidhausen.de%{REQUEST_URI} [R=301,L]
   Header always set X-Frame-Options "SAMEORIGIN"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
+
+# Änderungen sollen sofort ankommen: Seiten, Stil und Skript fragt der
+# Browser jedes Mal kurz nach (kostet nur eine 304-Antwort), Bilder und
+# Schrift darf er einen Tag behalten.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|css|js)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(jpg|jpeg|png|webp|svg|woff2?)$">
+    Header set Cache-Control "public, max-age=86400"
+  </FilesMatch>
+</IfModule>
