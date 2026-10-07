@@ -11,9 +11,10 @@ steht so, wie es die aktuellste Quelle (Treatwell) sagt.
   Dienstag offen — bitte dort nachziehen, sonst buchen Gäste am Dienstag.*
 - **Waxing Ismaning:** gibt es nicht; stand nie auf der neuen Seite.
 - **Nägel Ismaning:** Maniküre, Pediküre, Shellac wie bei Treatwell, bei
-  Jasmin. Gruppe „Hände & Füße“ trägt jetzt „nur Ismaning, bei Jasmin“.
-- **Team:** Ali Raza und Sara sind raus. Jasmin (Nägel, Ismaning) ist drin,
-  vorerst mit Initiale statt Foto.
+  Yasmin. Gruppe „Hände & Füße“ trägt jetzt „nur Ismaning, bei Yasmin“.
+- **Team:** Ali Raza und Sara sind raus. Yasmin (Nägel, Ismaning; mit Y,
+  so ist es richtig) und Mohammed (Haidhausen) sind mit Foto drin.
+  Mohammeds Rolle steht als „Friseur“, bitte bestätigen.
 
 - **Impressum und Datenschutz:** fertig geschrieben (Stand Oktober 2026),
   Anschriften von STRATO, Handwerkskammer und Aufsichtsbehörde an den
@@ -24,10 +25,10 @@ steht so, wie es die aktuellste Quelle (Treatwell) sagt.
 1. **Öffnungszeiten Ismaning.** Treatwell: Mo 9–18:45, Di 9–18:30,
    Mi–Fr 9–18:45, Sa 9–17. Alte Website: Di geschlossen, sonst bis 18:30.
    *Auf der Seite: Treatwell.* Bitte bestätigen.
-2. **Team — neue Namen zuordnen.** Neu kommen Tina, Carolina (bei
-   Treatwell „Karolina“), Ola, „Mohemmesd“ (Schreibweise?), Dardan, Elias und
-   Patrizia. Wer arbeitet in welchem Salon, Friseur/Friseurin oder Beauty?
-   Porträts für alle Neuen (auch Jasmin). Bisherige Frage: Die Namen stammen von der alten Website (2019/2020). In
+2. **Team: neue Namen zuordnen.** Vorgemerkt, Fotos schon zugeschnitten in
+   `werkzeuge/team-vorgemerkt/` (noch nicht auf der Seite): Dardan, Elias,
+   Carolina (bei Treatwell „Karolina“). Dafür fehlen Salon und Rolle.
+   Ganz ohne Foto noch: Tina, Ola, Patrizia. Bisherige Frage: Die Namen stammen von der alten Website (2019/2020). In
    aktuellen Bewertungen tauchen „Tina“ (Haidhausen) und bei Treatwell
    „Karolina“ (Ismaning) auf, beide ohne Foto. Wer arbeitet heute wo?
    Neue Porträts wären ein großer Gewinn — die alten sind nur 369 px breit.
