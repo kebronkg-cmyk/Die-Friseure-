@@ -219,9 +219,9 @@
     /* Wer in welchem Salon schneidet — wie auf der Startseite */
     var SALONS = {
       haidhausen: { name: "Haidhausen",
-        team: ["Ali", "Wissam", "Juna", "Zahed"] },
+        team: ["Ali", "Wissam", "Juna", "Zahed", "Mohammed"] },
       ismaning: { name: "Ismaning",
-        team: ["Ali", "Ania", "Kimi", "Jasmin"] }
+        team: ["Ali", "Ania", "Kimi", "Yasmin"] }
     };
     /* Terminwünsche gehen für beide Salons per WhatsApp an diese Nummer */
     var WHATSAPP = "4917682304558";
